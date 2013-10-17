@@ -60,7 +60,7 @@ require([
             panelMgr.add(contentPanel);
             panelMgr.start();
 
-        };
+        }
 
     });
 
