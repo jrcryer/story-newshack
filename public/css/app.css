@@ -297,6 +297,7 @@ table {
 #chapter-panel ol li {
   margin-bottom: 6px;
   position: relative;
+  cursor: pointer;
 }
 #chapter-panel ol li .index,
 #chapter-panel ol li .title {
@@ -342,6 +343,12 @@ table {
 #chapter-panel ol li.current .index,
 #chapter-panel ol li.current .title {
   background: #29ABE2;
+}
+#chapter-panel li:hover .title {
+  background: #86A5AD;
+}
+#chapter-panel li:hover .index {
+  background: #86A5AD;
 }
 #content-panel {
   z-index: 5000;
