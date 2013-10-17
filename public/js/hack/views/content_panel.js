@@ -25,6 +25,15 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
          */
         chapters: [],
 
+        initialize: function() {
+            _.bindAll(this, 'onScroll');
+            $(window).on("mousewheel", this.$el, this.onScroll);
+        },
+
+        onScroll: function(e) {
+
+        },
+
         render: function() {
             this.$el.html('');
 
