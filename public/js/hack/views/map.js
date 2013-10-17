@@ -35,7 +35,8 @@ define(['jquery'], function($) {
       view: this._view,
       target: elementId,
       layers: [this._baseLayer],
-      renderer: ol.RendererHint.CANVAS
+      renderer: ol.RendererHint.CANVAS,
+      controls: []
     });
 
   }
