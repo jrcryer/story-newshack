@@ -22,6 +22,10 @@ module.exports = function(grunt) {
                     livereload: true,
                 },
             },
+            less: {
+                files: ['app/less/**'],
+                tasks: ['less']
+            },
             css: {
                 files: ['public/css/**'],
                 options: {
@@ -76,6 +80,7 @@ module.exports = function(grunt) {
     //Load NPM tasks
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-concurrent');
@@ -84,7 +89,7 @@ module.exports = function(grunt) {
     grunt.option('force', true);
 
     //Default task(s).
-    grunt.registerTask('default', ['jshint', 'concurrent']);
+    grunt.registerTask('default', ['jshint', 'less', 'concurrent']);
 
     //Test task.
     grunt.registerTask('test', ['mochaTest']);
