@@ -27,7 +27,7 @@ define([
 
 
   MediaManager.prototype.setPage = function(chapter, page) {
-
+console.log('setPage');
     this.chapter = chapter;
     this.page = page;
 
@@ -47,16 +47,18 @@ define([
     if (this.map && this.page.map && this.page.map.features) {
       this.map.addFeatures(this.page.map.features);
     }
-console.log(page.person);
+
     if (page.person) {
       this._profilePanel = new Profile(page.person);
     } else if (this.hasOwnProperty('_profilePanel')) {
       this._profilePanel.remove();
     }
-    if (page.showIntro) {
+
+    if (true === page.showIntro) {
       this.setIntro(page);
     } else if (this.intro) {
-      this.intro.remove();
+      this.intro.$el.html('');
+      this.intro = undefined;
     }
   };
 
@@ -73,7 +75,9 @@ console.log(page.person);
     this.intro = new Intro({
       el: '#intro-container',
       page: page
-    }).render();
+    });
+    this.intro.render();
+    console.log('this.intro', this.intro);
   };
 
   return MediaManager;
