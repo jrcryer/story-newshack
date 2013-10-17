@@ -47,8 +47,11 @@ define([
     if (this.map && this.page.map && this.page.map.features) {
       this.map.addFeatures(this.page.map.features);
     }
-console.log(page.person);
+
     if (page.person) {
+      if (this._profilePanel) {
+        this._profilePanel.remove();
+      }
       this._profilePanel = new Profile(page.person);
     } else if (this.hasOwnProperty('_profilePanel')) {
       this._profilePanel.remove();
