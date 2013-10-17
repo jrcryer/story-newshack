@@ -2,8 +2,9 @@
 define([
   'backbone',
   'hack/views/map',
-  'hack/views/intro'
-], function(Backbone, Map, Intro) {
+  'hack/views/intro',
+  'hack/views/profile'
+], function(Backbone, Map, Intro, Profile) {
 
   var MediaManager = function(config) {
     this.config = config;
@@ -43,10 +44,10 @@ define([
       this.map.clearKml();
     }
 
-    if (this.map && this.page.map.features) {
+    if (this.map && this.page.map && this.page.map.features) {
       this.map.addFeatures(this.page.map.features);
     }
-
+console.log(page.person);
     if (page.person) {
       this._profilePanel = new Profile(page.person);
     } else if (this.hasOwnProperty('_profilePanel')) {
