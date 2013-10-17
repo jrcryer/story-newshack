@@ -12,12 +12,20 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
          * @var string
          */
         template: _.template(
+          '<% months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]; %>' +
           '<h1><%= title %></h1>' +
           '<ol id="chapters">' +
           '<% _.each(chapters, function(chapter, index) { %>' +
+            '<% index = (index + 1) > 9 ? index + 1 : "0" + (index + 1); %>'+
+            '<% start = new Date(chapter.beginDate); %>'+
+            '<% end = new Date(chapter.endDate); %>'+
             '<li data-index="<%= index %>">' +
-              '<div class="index"><%= index + 1 %></div>' +
-              '<div class="title"><%= chapter.title %></div>' +
+              '<div class="index"><%= index %></div>' +
+              '<div class="title">' +
+                '<%= chapter.title %>' +
+                '<span class="start-date"><%= start.getDay() + " " + months[start.getMonth()] + " " + start.getFullYear() %></span>' +
+                '<span class="end-date"><%= end.getDay() + " " + months[end.getMonth()] + " " + end.getFullYear() %></span>' +
+              '</div>' +
             '</li>' +
           '<% }); %>' +
           '</ol>'

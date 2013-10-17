@@ -32,7 +32,6 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
          *
          */
         initialize: function() {
-            Backbone.on('panel:update_stories', this.updatePages, this);
         },
 
         render: function() {
