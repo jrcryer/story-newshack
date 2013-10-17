@@ -1,9 +1,9 @@
 /*global define */
 define([
-  'backbone',
-  'hack/views/map',
-  'hack/views/profile'
-], function(Backbone, Map, Profile) {
+    'backbone',
+    'hack/views/map',
+    'hack/views/intro'
+], function (Backbone, Map, Intro) {
 
   var MediaManager = function(config) {
     this.config = config;
@@ -30,7 +30,13 @@ define([
     } else if (this.hasOwnProperty('_profilePanel')) {
       this._profilePanel.remove();
     }
+    if (page.showIntro) {
+        this.setIntro(page);
+    } else if (this.intro) {
+        this.intro.remove();
+    }
   };
+
 
   MediaManager.prototype.setMap = function(options) {
     if (!this.map) {
@@ -40,5 +46,12 @@ define([
     }
   };
 
-  return MediaManager;
+    MediaManager.prototype.setIntro = function(page) {
+        this.intro = new Intro({
+            el: '#intro-container',
+            page: page
+        }).render();
+    };
+
+    return MediaManager;
 });
