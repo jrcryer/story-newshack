@@ -41,27 +41,32 @@ require([
             error: function() {
                 console.log('Error loading config.');
             }
-        })
+        });
 
         function init(config) {
 
             mediaManager = new Hack.MediaManager(config);
             mediaManager.setPage(config.storyline.chapters[0], config.storyline.chapters[0].pages[0]);
 
-            new Hack.ChapterPanel({
-                el: '#panels',
+            var chapterPanel = new Hack.ChapterPanel({
+                el: '#chapter-panel',
                 title: 'Arab Spring',
                 chapters: [{
                     title: 'Title A'
                 }, {
                     title: 'Title B'
                 }]
-            }).render();
+            });
+            var contentPanel = new Hack.ContentPanel({
+                el: '#content-panel'
+            });
+            var panelMgr = new Hack.PanelManager();
+            panelMgr.add(chapterPanel);
+            panelMgr.add(contentPanel);
+            panelMgr.start();
 
         };
+
     });
-    // var panelMgr = new Hack.PanelManager();
-    // panelMgr.add();
-    //panelMgr.add(new Hack.ContentPanel());
 
 });
