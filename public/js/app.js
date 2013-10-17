@@ -28,8 +28,15 @@ require([
     'backbone',
     'hack/app',
 ], function($, Backbone, Hack) {
-
-
-    console.log(Hack);
+    $(function() {
+        new Hack.ChapterPanel({
+            el: '#panels',
+            title: 'Arab Spring',
+            chapters: []
+        }).render();
+    });
+    // var panelMgr = new Hack.PanelManager();
+    // panelMgr.add();
+    //panelMgr.add(new Hack.ContentPanel());
 
 });
