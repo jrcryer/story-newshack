@@ -25,6 +25,31 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
          */
         chapters: [],
 
+        initialize: function() {
+            _.bindAll(this, 'onScroll');
+            $(window).on("mousewheel", this.$el, this.onScroll);
+        },
+
+        onScroll: function(e) {
+            var el          = this.$el.find('#pages');
+
+            var position    = $(el).scrollTop();
+            var scrollPage = position/this.pageHeight;
+            var wholePage = Math.floor(scrollPage);
+            var remainder = scrollPage % 1;
+            var page = wholePage;
+            if (remainder > 0.7) {
+                page++;
+            }
+
+            //console.log(totalHeight);
+            console.log(position);
+            console.log('wholePage', wholePage);
+            console.log('remainder', remainder);
+            console.log('page', page);
+            console.log('position/this.pageHeight', position/this.pageHeight);
+        },
+
         render: function() {
             this.$el.html('');
 
@@ -39,6 +64,9 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
 
         setCurrentChapter: function(chapter) {
             this.chapter = chapter;
+            this.noOfPages = this.chapter.pages.length;
+            this.pageHeight = window.innerHeight;
+            console.log('this.pageHeight', this.pageHeight);
         }
     });
     return ContentPanel;
