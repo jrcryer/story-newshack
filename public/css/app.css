@@ -179,7 +179,7 @@ table {
 .ol-logo {
   display: none;
 }
-#panels {
+.panels {
   z-index: 5000;
   position: absolute;
   top: 0;
@@ -189,6 +189,9 @@ table {
   color: #fff;
   background: #000;
   background: rgba(0, 0, 0, 0.9);
+}
+.panels.content {
+  z-index: 6000;
 }
 #chapter-panel {
   color: #fff;
@@ -253,6 +256,7 @@ table {
   background: #29ABE2;
 }
 #content-panel {
+  display: none;
   z-index: 6000;
 }
 html,
