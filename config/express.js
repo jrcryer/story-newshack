@@ -2,7 +2,7 @@
  * Module dependencies.
  */
 var express = require('express'),
-    mongoStore = require('connect-mongo')(express),
+    //mongoStore = require('connect-mongo')(express),
     flash = require('connect-flash'),
     helpers = require('view-helpers'),
     config = require('./config');
@@ -44,13 +44,7 @@ module.exports = function(app) {
         app.use(express.methodOverride());
 
         //express/mongo session storage
-        app.use(express.session({
-            secret: 'MEAN',
-            store: new mongoStore({
-                url: config.db,
-                collection: 'sessions'
-            })
-        }));
+        app.use(express.session({secret: 'MEAN'}));
 
         //connect flash for flash messages
         app.use(flash());

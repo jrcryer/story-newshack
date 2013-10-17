@@ -32,6 +32,16 @@ module.exports = function(grunt) {
         jshint: {
             all: ['gruntfile.js', 'public/js/**/*.js', 'test/**/*.js', 'app/controller/*.js']
         },
+        less: {
+          development: {
+            options: {
+              ieCompat: true
+            },
+            files: {
+              "public/css/app.css": "app/less/app.less"
+            }
+          },
+        },
         nodemon: {
             dev: {
                 options: {

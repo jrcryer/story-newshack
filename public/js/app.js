@@ -30,4 +30,6 @@ require([
 ], function($, Backbone, Hack) {
 
 
+    console.log(Hack);
+
 });
