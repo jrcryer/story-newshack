@@ -190,6 +190,32 @@ table {
   background: #000;
   background: rgba(0, 0, 0, 0.9);
 }
+.page-meta {
+  position: fixed;
+  z-index: 1000;
+  top: 20px;
+  left: 62px;
+  background: black;
+  padding: 2px;
+  color: white;
+}
+.page-meta h4,
+.page-meta h5,
+.page-meta p {
+  padding: 0 14px;
+  font-weight: normal;
+}
+.page-meta h4 {
+  font-size: 20px;
+}
+.page-meta h5 {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 4px;
+}
+.page-meta p {
+  line-height: 19px;
+}
 #chapter-panel {
   z-index: 5000;
   top: 0;

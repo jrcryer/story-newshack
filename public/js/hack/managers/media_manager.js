@@ -26,7 +26,9 @@ define([
       this.map.clearKml();
     }
     if (page.person) {
-      var profile = new Profile(page.person);
+       this._profilePanel = new Profile(page.person);
+    } else if (this.hasOwnProperty('_profilePanel')) {
+      this._profilePanel.remove();
     }
   };
 
