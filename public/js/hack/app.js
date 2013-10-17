@@ -1,17 +1,15 @@
 /*global define */
 define([
-    'hack/views/map',
-    'hack/views/image',
-    'hack/views/article',
-    'hack/views/timeline',
+    'hack/managers/panel_manager',
+    'hack/views/chapter_panel',
+    'hack/views/content_panel'
 ],
-    function (MapView, ImageView, ArticleView, TimelineView) {
+    function (PanelManager, ChapterPanel, ContentPanel) {
         "use strict";
         return {
-            MapView: MapView,
-            ImageView: ImageView,
-            ArticleView: ArticleView,
-            TimelineView: TimelineView
+            PanelManager: PanelManager,
+            ChapterPanel: ChapterPanel,
+            ContentPanel: ContentPanel
         };
     }
 );

@@ -1,0 +1,65 @@
+{
+    "storyline": {
+        "title": "Arab Spring",
+        "chapters": [
+            {
+                "title": "Tunisia",
+                "beginDate": "2010-12-01",
+                "endDate": "2010-12-01",
+                "pages": [
+                    {
+                        "title": "Demonstrations",
+                        "summary": "A series of increasingly violent street demonstrations through December.", 
+                        "beginDate": "2010-12-01",
+                        "endDate": "2010-12-31",
+                        "map": {
+                            "center": [10, 10]
+                        }
+                    },
+                    {
+                        "title": "Suicide protestor dies",
+                        "summary": "A Tunisian graduate whose attempted suicide set off violent protests over unemployment across the North Africa nation has died.", 
+                        "beginDate": "2010-12-17",
+                        "endDate": "2010-12-17",
+                        "map": {
+                            "center": [10, 10]
+                        }
+                    },
+                    {
+                        "title": "Ousting of president",
+                        "summary": "Ben Ali fled into exile in Saudi Arabia, ending his 23 years in power. A state of emergency was declared and a caretaker coalition government was created.", 
+                        "beginDate": "2011-01-14",
+                        "endDate": "2011-01-14",
+                        "person": {
+                            "name": "Zine El Abidine Ben Ali",
+                            "summary": "Led Tunisia for 23 years before stepping down in January 2011 amid an unprecedented wave of street protests.",
+                            "image": {
+                                "url": "http://news.bbcimg.co.uk/media/images/50809000/jpg/_50809733_50808975.jpg",
+                                "width": 224,
+                                "height": 299
+                            },
+                            "url": "http://www.bbc.co.uk/news/world-africa-12196679"
+                        }
+                    },
+                    {
+                        "title": "Government resuffle",
+                        "summary": "As a result of continued daily protests, Prime Minister Mohamed Ghannouchi reshuffled the government, removing all former RCD members other than himself.",
+                        "beginDate": "2011-01-27",
+                        "endDate": "2011-01-27",
+                        "person": {
+                            "name": "Mohamed Ghannouchi",
+                            "summary": "The former Prime Minister of Tunisia and was self-proclaimed acting President of the country for a few hours starting 14 January 2011, under Article 56 of the Constitution of Tunisia.",
+                            "born": "1941-08-18",
+                            "age": 72,
+                            "image": {
+                                "url": "http://news.bbcimg.co.uk/media/images/51443000/jpg/_51443818_011389726-1.jpg",
+                                "width": 304,
+                                "height": 171
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
