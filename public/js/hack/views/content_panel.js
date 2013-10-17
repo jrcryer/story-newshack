@@ -9,6 +9,7 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
          * @var string
          */
         template: _.template(
+          '<div class="pi">' +
           '<ol id="pages">' +
           '<% _.each(pages, function(page, index) { %>' +
             '<li class="page" id="i-<%= index %>">' +
@@ -16,7 +17,7 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
               '<div><%= page.summary %></div>' +
             '</li>' +
           '<% }); %>' +
-          '</ol>'
+          '</ol></div>'
         ),
 
         /**
