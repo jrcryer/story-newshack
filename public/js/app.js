@@ -29,19 +29,21 @@ require([
     'hack/app',
 ], function($, Backbone, Hack) {
 
-    $(function() {
-        new Hack.ChapterPanel({
-            el: '#panels',
-            title: 'Arab Spring',
-            chapters: [{
-                title: 'Title A'
-            }, {
-                title: 'Title B'
-            }]
-        }).render();
+    var chapterPanel = new Hack.ChapterPanel({
+        el: '#chapter-panel',
+        title: 'Arab Spring',
+        chapters: [{
+            title: 'Title A'
+        }, {
+            title: 'Title B'
+        }]
     });
-    // var panelMgr = new Hack.PanelManager();
-    // panelMgr.add();
-    //panelMgr.add(new Hack.ContentPanel());
+    var contentPanel = new Hack.ContentPanel({
+        el: '#content-panel'
+    });
+    var panelMgr = new Hack.PanelManager();
+    panelMgr.add(chapterPanel);
+    panelMgr.add(contentPanel);
+    panelMgr.start();
 
 });
