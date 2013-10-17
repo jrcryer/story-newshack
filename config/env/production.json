@@ -1,4 +1,5 @@
 {
+    "db": "mongodb://admin:ysi7GP9RZnqc@127.8.126.2:27017/story",
     "app": {
         "name": "MEAN - A Modern Stack - Production"
     }
