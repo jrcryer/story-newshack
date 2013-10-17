@@ -12,7 +12,7 @@ define(['backbone', 'underscore'], function (Backbone, _) {
          * @var string
          */
         template: _.template(
-          '<% months = ["January, "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; %>' +
+          '<% months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; %>' +
           '<h1><%= title %></h1>' +
           '<ol id="chapters">' +
           '<% _.each(chapters, function(chapter, index) { %>' +
