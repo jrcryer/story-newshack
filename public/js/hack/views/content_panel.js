@@ -42,6 +42,7 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
 
             if (remainder > 0.7) {
                 var nextPage = ++page;
+                console.log(this.currentPage);
 
                 if (this.currentPage !== nextPage) {
                     this.currentPage = nextPage;
