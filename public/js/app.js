@@ -30,15 +30,35 @@ require([
 ], function($, Backbone, Hack) {
 
     $(function() {
-        new Hack.ChapterPanel({
-            el: '#panels',
-            title: 'Arab Spring',
-            chapters: [{
-                title: 'Title A'
-            }, {
-                title: 'Title B'
-            }]
-        }).render();
+
+        var mediaManager;
+
+        $.ajax({
+            url: 'data/stories/arab_spring.json',
+            success: function(config) {
+                init(config);
+            },
+            error: function() {
+                console.log('Error loading config.');
+            }
+        })
+
+        function init(config) {
+
+            mediaManager = new Hack.MediaManager(config);
+            mediaManager.setPage(config.storyline.chapters[0], config.storyline.chapters[0].pages[0]);
+
+            new Hack.ChapterPanel({
+                el: '#panels',
+                title: 'Arab Spring',
+                chapters: [{
+                    title: 'Title A'
+                }, {
+                    title: 'Title B'
+                }]
+            }).render();
+
+        };
     });
     // var panelMgr = new Hack.PanelManager();
     // panelMgr.add();

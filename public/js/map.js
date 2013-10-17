@@ -6,7 +6,10 @@ jQuery(function($){
     target: 'test_map',
     layers: [
       new ol.layer.Tile({
-        source: new ol.source.OSM(),
+        source: new ol.source.BingMaps({
+          key: 'AgEuoaDhjUTNeWIh9upgBkRXD6rVHJiPO-E3sFvNbkR79qNwtftafmpqNfjV-o-8',
+          style: 'Aerial'
+        }),
         preload: 4
       })
     ],

@@ -1,5 +1,5 @@
 /*global define, ol */
-define(['jquery-1'], function($) {
+define(['jquery'], function($) {
 
   /**
    * Create a mew instance of a map
@@ -21,9 +21,15 @@ define(['jquery-1'], function($) {
       zoom: this._options.zoom
     });
 
-    this._baseLayer = new ol.Layer.Tile({
+    this._baseLayer = new ol.layer.Tile({
       preload: 4,
-      source: new ol.source.OSM()
+      //source: new ol.source.OSM()
+      //visible: false,
+      //preload: Infinity,
+      source: new ol.source.BingMaps({
+        key: 'AgEuoaDhjUTNeWIh9upgBkRXD6rVHJiPO-E3sFvNbkR79qNwtftafmpqNfjV-o-8',
+        style: 'AerialWithLabels'
+      })
     });
 
     this._olMap = new ol.Map({
