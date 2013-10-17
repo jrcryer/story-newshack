@@ -33,9 +33,7 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
             this.$el.html(this.template({
                 pages: this.chapter.pages
             }));
-            this.$el.addClass('active', function() {
-
-            });
+            this.$el.addClass('active');
         },
 
         setCurrentChapter: function(chapter) {
