@@ -3,6 +3,9 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
 
     var ChapterPanel = Backbone.View.extend({
 
+        /**
+         * @var string
+         */
         title: '',
 
         /**
@@ -12,7 +15,7 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
           '<h1><%= title %></h1>' +
           '<ol id="chapters">' +
           '<% _.each(chapters, function(chapter, index) { %>' +
-            '<li>' +
+            '<li data-index="<%= index %>">' +
               '<div class="index"><%= index + 1 %></div>' +
               '<div class="title"><%= chapter.title %></div>' +
             '</li>' +
@@ -20,6 +23,9 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
           '</ol>'
         ),
 
+        /**
+         * Event handlers
+         */
         events: {
           'click li': 'onChapterClick'
         },
@@ -34,11 +40,14 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
          *
          */
         initialize: function(options) {
-
-            this.title = options.title;
-            this.chapters = options.chapters;
+            this.title = 'Key Events';
+            this.chapters = options.storyline.chapters;
         },
 
+        /**
+         * Render the chapter panel
+         *
+         */
         render: function() {
             this.$el.html('');
 
@@ -48,8 +57,13 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
             }));
         },
 
+        /**
+         * Handles a click event on a particular chapter
+         */
         onChapterClick: function(e) {
-          e.preventDefault();
+            var chapter = this.chapters[$(e.currentTarget).data().index];
+            Backbone.trigger('panel:chapter-selected', chapter);
+            e.preventDefault();
         }
     });
     return ChapterPanel;
