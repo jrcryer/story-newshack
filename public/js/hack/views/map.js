@@ -38,7 +38,7 @@ define(['jquery'], function($) {
       renderer: ol.RendererHint.CANVAS
     });
 
-  };
+  }
 
   Map.prototype.modifyPositionForScreen = function(position, zoom) {
     offset = 1 * (12 - zoom);

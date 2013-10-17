@@ -41,7 +41,6 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
 
         setCurrentChapter: function(chapter) {
             this.chapter = chapter;
-            console.log(chapter);
         }
     });
     return ContentPanel;
