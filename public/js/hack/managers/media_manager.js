@@ -1,16 +1,9 @@
 /*global define */
 define([
-<<<<<<< HEAD
     'backbone',
     'hack/views/map',
     'hack/views/intro'
 ], function (Backbone, Map, Intro) {
-=======
-  'backbone',
-  'hack/views/map',
-  'hack/views/profile'
-], function(Backbone, Map, Profile) {
->>>>>>> 713aaa3f444df481a11a1bb6b08d0adbd940185a
 
   var MediaManager = function(config) {
     this.config = config;
