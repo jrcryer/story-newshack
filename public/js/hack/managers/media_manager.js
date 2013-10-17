@@ -18,6 +18,10 @@ define([
 
     if (this.page.map) {
       this.setMap(this.page.map);
+
+      $(page.map.features).each(function(index, feature) {
+        console.log(feature);
+      });
     }
 
     if (this.chapter.map && this.chapter.map.kml) {
@@ -35,6 +39,8 @@ define([
     } else if (this.intro) {
         this.intro.remove();
     }
+
+
   };
 
 
