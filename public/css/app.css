@@ -292,7 +292,7 @@ table {
   transition: 0.8s all ease-in;
 }
 #chapter-panel h1.defocus {
-  -webkit-filter: blur(8px);
+  opacity: 0;
 }
 #chapter-panel ol {
   margin: 0;
