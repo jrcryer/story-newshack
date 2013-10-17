@@ -3,7 +3,7 @@ head
   meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
   meta(name='viewport', content='width=device-width,initial-scale=1')
 
-  title= appName+' - '+title
+  title= title + ' - ' + appName
   meta(http-equiv='Content-type', content='text/html;charset=UTF-8')
   meta(name="description", content="Story #newsHACK")
 
@@ -18,3 +18,7 @@ head
     script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
 
   script(src='/lib/requirejs/require.js' data-main='/js/app')
+
+  // ol3
+  script(src='/vendor/ol3/ol.js' type="text/javascript")
+  link(href="/vendor/ol3/ol.css" rel="stylesheet" media="all" type="text/css")
