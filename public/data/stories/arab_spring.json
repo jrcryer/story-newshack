@@ -82,7 +82,8 @@
                         "beginDate": "2011-01-25",
                         "endDate": "2011-02-12",
                         "map": {
-                            "center": [10, 10],
+                            "center": [30, 26],
+                            "zoom": 5,
                             "label": "Egypt"
                         },
                         "quotes": [
@@ -115,7 +116,8 @@
                         "beginDate": "2011-01-25",
                         "endDate": "2011-02-12",
                         "map": {
-                            "center": [10, 10],
+                            "center": [21, 27],
+                            "zoom": 5,
                             "label": "Libya"
                         },
                         "quotes": [

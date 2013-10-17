@@ -175,6 +175,9 @@ table {
   width: 100%;
   height: 100%;
 }
+.ol-logo {
+  display: none;
+}
 #panels {
   z-index: 5000;
   position: absolute;
