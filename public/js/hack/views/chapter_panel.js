@@ -40,8 +40,8 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
          *
          */
         initialize: function(options) {
-            this.title = options.title;
-            this.chapters = options.chapters;
+            this.title = 'Key Events';
+            this.chapters = options.storyline.chapters;
         },
 
         /**

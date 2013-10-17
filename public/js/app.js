@@ -50,12 +50,7 @@ require([
 
             var chapterPanel = new Hack.ChapterPanel({
                 el: '#chapter-panel',
-                title: 'Arab Spring',
-                chapters: [{
-                    title: 'Title A'
-                }, {
-                    title: 'Title B'
-                }]
+                storyline: config.storyline
             });
             var contentPanel = new Hack.ContentPanel({
                 el: '#content-panel'

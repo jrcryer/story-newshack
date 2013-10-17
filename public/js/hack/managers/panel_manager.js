@@ -14,7 +14,7 @@ define(['backbone', 'underscore'], function (Backbone, _) {
 
         /**
          * Show the content
-
+         *
          */
         var showContent = function(chapter) {
             var panel = _.last(panels);
