@@ -62,7 +62,7 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
          */
         onChapterClick: function(e) {
             var chapter = this.chapters[$(e.currentTarget).data().index];
-            Backbone.trigger('panel:chapter-selected', chapter);
+            Backbone.trigger('story:page-change', chapter, chapter.pages[0]);
             e.preventDefault();
         }
     });

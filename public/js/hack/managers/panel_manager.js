@@ -16,9 +16,9 @@ define(['backbone', 'underscore'], function (Backbone, _) {
          * Show the content
          *
          */
-        var showContent = function(chapter) {
+        var showContent = function(chapter, page) {
             var panel = _.last(panels);
-            panel.setCurrentChapter(chapter);
+            panel.setCurrentChapter(chapter, page);
             panel.render();
         };
 
@@ -36,7 +36,7 @@ define(['backbone', 'underscore'], function (Backbone, _) {
             _.first(panels).render();
         };
 
-        Backbone.on('panel:chapter-selected', showContent);
+        Backbone.on('story:page-change', showContent);
         Backbone.on('panel:chapter-unselected', hideContent);
 
         return {
