@@ -26,7 +26,13 @@
             "map": {
               "center": [10.18, 31.8],
               "zoom": 6,
-              "label": "Tunisia"
+              "label": "Tunisia",
+              "features": [
+                {
+                  "label": "Hello world",
+                  "position": [10.18, 33.8]
+                }
+              ]
             },
             "quotes": [
               {
