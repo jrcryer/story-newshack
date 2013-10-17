@@ -27,18 +27,10 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
          */
         chapters: [],
 
-        /**
-         * Initialize and setup event listening
-         *
-         */
-        initialize: function() {
-        },
-
         render: function() {
             this.$el.html('');
 
             if (this.chapter === null) {
-
                 return;
             }
             this.$el.html(this.template({
@@ -48,6 +40,7 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
 
         setCurrentChapter: function(chapter) {
             this.chapter = chapter;
+            console.log(chapter);
         }
     });
     return ContentPanel;

@@ -16,10 +16,10 @@ define(['backbone', 'underscore'], function (Backbone, _) {
           '<h1><%= title %></h1>' +
           '<ol id="chapters">' +
           '<% _.each(chapters, function(chapter, index) { %>' +
-            '<% index = (index + 1) > 9 ? index + 1 : "0" + (index + 1); %>'+
-            '<% start = new Date(chapter.beginDate); %>'+
-            '<% end = new Date(chapter.endDate); %>'+
             '<li data-index="<%= index %>">' +
+                '<% index = (index + 1) > 9 ? index + 1 : "0" + (index + 1); %>'+
+                '<% start = new Date(chapter.beginDate); %>'+
+                '<% end = new Date(chapter.endDate); %>'+
               '<div class="index"><span><%= index %></span></div>' +
               '<div class="title">' +
                 '<%= chapter.title %>' +
