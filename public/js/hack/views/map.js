@@ -93,21 +93,6 @@ define(['jquery'], function($) {
               width: 4
             })
           ]
-        }),
-        new ol.style.Rule({
-          maxResolution: 5000,
-          symbolizers: [
-            new ol.style.Text({
-              color: 'black',
-              text: ol.expr.parse('name'),
-              fontFamily: 'Calibri,sans-serif',
-              fontSize: 12,
-              stroke: new ol.style.Stroke({
-                color: 'white',
-                width: 3
-              })
-            })
-          ]
         })
       ]})
     });

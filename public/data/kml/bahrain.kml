@@ -7,7 +7,6 @@
 <Folder id="kml_ft_Bahrain">
 <name>Bahrain</name>
 <Placemark id="kml_1">
-<name>kml_1</name>
 <Polygon>
 <outerBoundaryIs>
 <LinearRing>
