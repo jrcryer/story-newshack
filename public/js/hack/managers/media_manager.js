@@ -49,6 +49,9 @@ console.log('setPage');
     }
 
     if (page.person) {
+      if (this._profilePanel) {
+        this._profilePanel.remove();
+      }
       this._profilePanel = new Profile(page.person);
     } else if (this.hasOwnProperty('_profilePanel')) {
       this._profilePanel.remove();

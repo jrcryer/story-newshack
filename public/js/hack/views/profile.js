@@ -20,15 +20,24 @@ define(['jquery'], function($){
 
     this.$html = $(html);
     this.$html.css('width', person.image.width);
+    var self = this;
 
     $('body').append(this.$html);
+    setTimeout(function() {
+        self.$html.addClass('visible');
+    }, 500);
   }
 
   /**
    * Remove the panel
    */
   ProfileView.prototype.remove = function() {
-    this.$html.remove();
+    var self = this;
+    this.$html.removeClass('visible');
+
+    setTimeout(function() {
+        self.$html.remove();
+    }, 500);
   };
 
   return ProfileView;
