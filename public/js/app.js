@@ -29,7 +29,6 @@ require([
     'hack/app',
 ], function($, Backbone, Hack) {
 
-<<<<<<< HEAD
     $(function() {
 
         var mediaManager;
