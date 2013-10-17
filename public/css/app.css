@@ -268,7 +268,20 @@ table {
   background: #000;
   background: rgba(0, 0, 0, 0.9);
   z-index: 6000;
+  right: -300px;
   display: none;
+  transition: all 5s ease-in;
+  -moz-transition: all 5s ease-in;
+  -ms-transition: all 5s ease-in;
+  -o-transition: all 5s ease-in;
+  -webkit-transition-property: right;
+  -webkit-transition-duration: 5s;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 2s;
+}
+#content-panel.active {
+  display: block;
+  margin-right: 300px;
 }
 html,
 body {

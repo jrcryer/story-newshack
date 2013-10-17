@@ -19,10 +19,6 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
           '</ol>'
         ),
 
-        events: {
-          'click li': 'onChapterClick'
-        },
-
         /**
          * @var array
          */
@@ -37,6 +33,9 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
             this.$el.html(this.template({
                 pages: this.chapter.pages
             }));
+            this.$el.addClass('active', function() {
+
+            });
         },
 
         setCurrentChapter: function(chapter) {
