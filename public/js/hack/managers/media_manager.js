@@ -1,9 +1,9 @@
 /*global define */
 define([
-    'backbone',
-    'hack/views/map',
-    'hack/views/intro'
-], function (Backbone, Map, Intro) {
+  'backbone',
+  'hack/views/map',
+  'hack/views/intro'
+], function(Backbone, Map, Intro) {
 
   var MediaManager = function(config) {
     this.config = config;
@@ -42,15 +42,20 @@ define([
     } else {
       this.map.clearKml();
     }
+
+    if (this.map && this.page.map.features) {
+      this.map.addFeatures(this.page.map.features);
+    }
+
     if (page.person) {
-       this._profilePanel = new Profile(page.person);
+      this._profilePanel = new Profile(page.person);
     } else if (this.hasOwnProperty('_profilePanel')) {
       this._profilePanel.remove();
     }
     if (page.showIntro) {
-        this.setIntro(page);
+      this.setIntro(page);
     } else if (this.intro) {
-        this.intro.remove();
+      this.intro.remove();
     }
   };
 
@@ -63,12 +68,12 @@ define([
     }
   };
 
-    MediaManager.prototype.setIntro = function(page) {
-        this.intro = new Intro({
-            el: '#intro-container',
-            page: page
-        }).render();
-    };
+  MediaManager.prototype.setIntro = function(page) {
+    this.intro = new Intro({
+      el: '#intro-container',
+      page: page
+    }).render();
+  };
 
-    return MediaManager;
+  return MediaManager;
 });

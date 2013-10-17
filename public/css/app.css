@@ -383,7 +383,7 @@ table {
   height: 100%;
   margin: 0;
   list-style: none;
-  overflow: scroll;
+  overflow: auto;
 }
 #content-panel ol h2 {
   margin: 0 0 12px;
@@ -422,7 +422,7 @@ section {
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.6);
 }
 ::-webkit-scrollbar-thumb:window-inactive {
   background: rgba(255, 255, 255, 0.4);
