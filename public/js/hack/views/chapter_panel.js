@@ -1,5 +1,5 @@
 /*global define */
-define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
+define(['backbone', 'underscore'], function (Backbone, _) {
 
     var ChapterPanel = Backbone.View.extend({
 
@@ -12,12 +12,20 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
          * @var string
          */
         template: _.template(
+          '<% months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]; %>' +
           '<h1><%= title %></h1>' +
           '<ol id="chapters">' +
           '<% _.each(chapters, function(chapter, index) { %>' +
             '<li data-index="<%= index %>">' +
-              '<div class="index"><%= index + 1 %></div>' +
-              '<div class="title"><%= chapter.title %></div>' +
+                '<% index = (index + 1) > 9 ? index + 1 : "0" + (index + 1); %>'+
+                '<% start = new Date(chapter.beginDate); %>'+
+                '<% end = new Date(chapter.endDate); %>'+
+              '<div class="index"><span><%= index %></span></div>' +
+              '<div class="title">' +
+                '<span class="wrapper"><%= chapter.title %>' +
+                '<span class="start-date"><%= start.getDay() + " " + months[start.getMonth()] + " " + start.getFullYear() %></span>' +
+                '<span class="end-date"><%= end.getDay() + " " + months[end.getMonth()] + " " + end.getFullYear() %></span></span>' +
+              '</div>' +
             '</li>' +
           '<% }); %>' +
           '</ol>'
@@ -61,7 +69,13 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
          * Handles a click event on a particular chapter
          */
         onChapterClick: function(e) {
-            var chapter = this.chapters[$(e.currentTarget).data().index];
+            var el      = this.$el.find(e.currentTarget);
+            var chapter = this.chapters[el.data().index];
+
+            this.$el.find('.current').removeClass('current');
+            el.addClass('current');
+
+
             Backbone.trigger('story:page-change', chapter, chapter.pages[0]);
             e.preventDefault();
         }
