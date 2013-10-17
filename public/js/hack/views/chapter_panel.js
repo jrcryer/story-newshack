@@ -80,8 +80,8 @@ define(['backbone', 'underscore'], function (Backbone, _) {
             el.addClass('current');
 
             this.$el.find('h1').addClass('defocus');
-            
-            Backbone.trigger('story:page-change', chapter, chapter.pages[0]);
+
+            Backbone.trigger('story:chapter-change', chapter);
             e.preventDefault();
         }
     });
