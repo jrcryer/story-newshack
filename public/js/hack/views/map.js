@@ -16,6 +16,8 @@ define(['jquery'], function($) {
       zoom: 6
     }, options);
 
+    this._options.center = this.modifyPositionForScreen(this._options.center, this._options.zoom);
+
     this._view = new ol.View2D({
       center: ol.proj.transform(this._options.center, 'EPSG:4326', 'EPSG:3857'),
       zoom: this._options.zoom
@@ -36,7 +38,13 @@ define(['jquery'], function($) {
       renderer: ol.RendererHint.CANVAS
     });
 
-  }
+  };
+
+  Map.prototype.modifyPositionForScreen = function(position, zoom) {
+    offset = 1 * (12 - zoom);
+    return [position[0] + offset, position[1]];
+  };
+
 
   /**
    * Clear kml layer
@@ -116,6 +124,8 @@ define(['jquery'], function($) {
   Map.prototype.moveTo = function(position, zoom, transition) {
 
     var duration, start, viewZoom, panAnimation, zoomAnimation, bounceMultiplier;
+
+    position = this.modifyPositionForScreen(position, zoom);
 
     viewZoom = this._view.getResolution();
     duration = 2000;
