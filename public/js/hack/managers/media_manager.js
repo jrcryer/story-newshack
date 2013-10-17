@@ -1,8 +1,9 @@
 /*global define */
 define([
     'backbone',
-    'hack/views/map'
-], function (Backbone, Map) {
+    'hack/views/map',
+    'hack/views/intro'
+], function (Backbone, Map, Intro) {
 
     var MediaManager = function(config) {
         this.config = config;
@@ -24,6 +25,13 @@ define([
         } else {
             this.map.clearKml();
         }
+
+        if (page.showIntro) {
+            this.setIntro(page);
+        } else if (this.intro) {
+            this.intro.remove();
+        }
+        
     };
 
     MediaManager.prototype.setMap = function(options) {
@@ -32,6 +40,13 @@ define([
         } else {
             this.map.moveTo(options.center, options.zoom);
         }
+    };
+
+    MediaManager.prototype.setIntro = function(page) {
+        this.intro = new Intro({
+            el: '#intro-container',
+            page: page
+        }).render();
     };
 
     return MediaManager;
