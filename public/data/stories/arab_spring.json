@@ -1,156 +1,156 @@
 {
-    "storyline": {
-        "title": "Arab Spring",
-        "chapters": [
-            {
-                "title": "Tunisia",
-                "beginDate": "2010-12-01",
-                "endDate": "2010-12-01",
-                "map": {
-                    "kml": "/data/kml/tunisia.kml"
-                },
-                "pages": [
-                    {
-                        "title": "Tunisia",
-                        "summary": "Overthrow of Zine El Abidine Ben Ali; Ben Ali flees into exile in Saudi Arabia.", 
-                        "showIntro": true,
-                        "beginDate": "2010-12-01",
-                        "endDate": "2010-12-31",
-                        "map": {
-                            "center": [10.18, 33.8],
-                            "zoom": 6,
-                            "label": "Tunisia"
-                        },
-                        "quotes": [
-                            {
-                                "quote": "We had a clean revolution. The former president turned out to be a coward. He just ran away. Not like the others - like the poor Libyans, or in Syria - but it lit the fuse to all the other revolutions",
-                                "attribution": "Wassim Herissi, radio DJ"
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Demonstrations",
-                        "summary": "A series of increasingly violent street demonstrations through December.", 
-                        "beginDate": "2010-12-01",
-                        "endDate": "2010-12-31"
-                    },
-                    {
-                        "title": "Suicide protestor dies",
-                        "summary": "Mohammed Bouazizi, a Tunisian graduate whose attempted suicide set off violent protests over unemployment across the North Africa nation has died.", 
-                        "beginDate": "2010-12-17",
-                        "endDate": "2010-12-17"
-                    },
-                    {
-                        "title": "Ousting of president",
-                        "summary": "Ben Ali fled into exile in Saudi Arabia, ending his 23 years in power. A state of emergency was declared and a caretaker coalition government was created.", 
-                        "beginDate": "2011-01-14",
-                        "endDate": "2011-01-14",
-                        "person": {
-                            "name": "Zine El Abidine Ben Ali",
-                            "summary": "Led Tunisia for 23 years before stepping down in January 2011 amid an unprecedented wave of street protests.",
-                            "image": {
-                                "url": "http://news.bbcimg.co.uk/media/images/50809000/jpg/_50809733_50808975.jpg",
-                                "width": 224,
-                                "height": 299
-                            },
-                            "url": "http://www.bbc.co.uk/news/world-africa-12196679"
-                        }
-                    },
-                    {
-                        "title": "Government resuffle",
-                        "summary": "As a result of continued daily protests, Prime Minister Mohamed Ghannouchi reshuffled the government, removing all former RCD members other than himself.",
-                        "beginDate": "2011-01-27",
-                        "endDate": "2011-01-27",
-                        "person": {
-                            "name": "Mohamed Ghannouchi",
-                            "summary": "The former Prime Minister of Tunisia and was self-proclaimed acting President of the country for a few hours starting 14 January 2011, under Article 56 of the Constitution of Tunisia.",
-                            "born": "1941-08-18",
-                            "age": 72,
-                            "image": {
-                                "url": "http://news.bbcimg.co.uk/media/images/51443000/jpg/_51443818_011389726-1.jpg",
-                                "width": 304,
-                                "height": 171
-                            }
-                        }
-                    }
-                ]
+  "storyline": {
+    "title": "Arab Spring",
+    "chapters": [
+      {
+        "title": "Tunisia",
+        "beginDate": "2010-12-01",
+        "endDate": "2010-12-01",
+        "map": {
+          "kml": "/data/kml/tunisia.kml"
+        },
+        "pages": [
+          {
+            "title": "Tunisia",
+            "summary": "Overthrow of Zine El Abidine Ben Ali; Ben Ali flees into exile in Saudi Arabia.", 
+            "showIntro": true,
+            "beginDate": "2010-12-01",
+            "endDate": "2010-12-31",
+            "map": {
+              "center": [10.18, 33.8],
+              "zoom": 6,
+              "label": "Tunisia"
             },
-            {
-                "title": "Egypt",
-                "beginDate": "2011-01-25",
-                "endDate": "2011-01-25",
-                "map": {
-                    "kml": "/data/kml/egypt.kml"
-                },
-                "pages": [
-                    {
-                        "title": "Egypt",
-                        "summary": "Inspired by the uprising in Tunisia and prior to his entry as a central figure in Egyptian politics, potential presidential candidate Mohamed ElBaradei warned of a \"Tunisia-style explosion\" in Egypt.",
-                        "showIntro": true,
-                        "beginDate": "2011-01-25",
-                        "endDate": "2011-02-12",
-                        "map": {
-                            "center": [30, 26],
-                            "zoom": 5,
-                            "label": "Egypt"
-                        },
-                        "quotes": [
-                            {
-                                "quote": "Our country's condition was getting worse and worse. There was corruption, torture, injustice, inequality and no freedom. Someone had to stand up and say 'enough is enough'",
-                                "attribution": "Ahmed Raafat Amin, protester"
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Protests",
-                        "summary": "Protests in Egypt began on 25 January 2011 and ran for 18 days. Beginning around midnight on 28 January, the Egyptian government attempted, somewhat successfully, to eliminate the nation's Internet access, in order to inhibit the protesters' ability use media activism to organize through social media.[192] Later that day, as tens of thousands protested on the streets of Egypt's major cities, President Hosni Mubarak dismissed his government, later appointing a new cabinet. Mubarak also appointed the first Vice President in almost 30 years.", 
-                        "beginDate": "2011-01-25",
-                        "endDate": "2011-02-12",
-                        "map": {
-                            "center": [10, 10],
-                            "label": "Cairo"
-                        }
-                    }
-                ]
-            },
-            {
-                "title": "Libya",
-                "beginDate": "2011-02-15",
-                "endDate": "2011-02-15",
-                "map": {
-                    "kml": "/data/kml/libya.kml"
-                },
-                "pages": [
-                    {
-                        "title": "Libya",
-                        "summary": "The Libyan Civil War, also referred to as the Libyan Revolution was a 2011 armed conflict in the North African country of Libya, fought between forces loyal to Colonel Muammar Gaddafi and those seeking to oust his government.",
-                        "showIntro": true,
-                        "beginDate": "2011-01-25",
-                        "endDate": "2011-02-12",
-                        "map": {
-                            "center": [21, 27],
-                            "zoom": 5,
-                            "label": "Libya"
-                        },
-                        "quotes": [
-                            {
-                                "quote": "It's freedom. There's no Gaddafi, unbelievable. I feel the freedom. I smell the freedom.", 
-                                "attribution": "Lamin el-Bijou, Banghazi resident"
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Protests",
-                        "summary": "Protests in Egypt began on 25 January 2011 and ran for 18 days. Beginning around midnight on 28 January, the Egyptian government attempted, somewhat successfully, to eliminate the nation's Internet access, in order to inhibit the protesters' ability use media activism to organize through social media.[192] Later that day, as tens of thousands protested on the streets of Egypt's major cities, President Hosni Mubarak dismissed his government, later appointing a new cabinet. Mubarak also appointed the first Vice President in almost 30 years.", 
-                        "beginDate": "2011-01-25",
-                        "endDate": "2011-02-12",
-                        "map": {
-                            "center": [10, 10],
-                            "label": "Benghazi"
-                        }
-                    }
-                ]
+            "quotes": [
+              {
+                "quote": "We had a clean revolution. The former president turned out to be a coward. He just ran away. Not like the others - like the poor Libyans, or in Syria - but it lit the fuse to all the other revolutions",
+                "attribution": "Wassim Herissi, radio DJ"
+              }
+            ]
+          },
+          {
+            "title": "Demonstrations",
+            "summary": "A series of increasingly violent street demonstrations through December.",
+            "beginDate": "2010-12-01",
+            "endDate": "2010-12-31"
+          },
+          {
+            "title": "Suicide protestor dies",
+            "summary": "Mohammed Bouazizi, a Tunisian graduate whose attempted suicide set off violent protests over unemployment across the North Africa nation has died.",
+            "beginDate": "2010-12-17",
+            "endDate": "2010-12-17"
+          },
+          {
+            "title": "Ousting of president",
+            "summary": "Ben Ali fled into exile in Saudi Arabia, ending his 23 years in power. A state of emergency was declared and a caretaker coalition government was created.",
+            "beginDate": "2011-01-14",
+            "endDate": "2011-01-14",
+            "person": {
+              "name": "Zine El Abidine Ben Ali",
+              "summary": "Led Tunisia for 23 years before stepping down in January 2011 amid an unprecedented wave of street protests.",
+              "image": {
+                "url": "http://news.bbcimg.co.uk/media/images/50809000/jpg/_50809733_50808975.jpg",
+                "width": 224,
+                "height": 299
+              },
+              "url": "http://www.bbc.co.uk/news/world-africa-12196679"
             }
+          },
+          {
+            "title": "Government resuffle",
+            "summary": "As a result of continued daily protests, Prime Minister Mohamed Ghannouchi reshuffled the government, removing all former RCD members other than himself.",
+            "beginDate": "2011-01-27",
+            "endDate": "2011-01-27",
+            "person": {
+              "name": "Mohamed Ghannouchi",
+              "summary": "The former Prime Minister of Tunisia and was self-proclaimed acting President of the country for a few hours starting 14 January 2011, under Article 56 of the Constitution of Tunisia.",
+              "born": "1941-08-18",
+              "age": 72,
+              "image": {
+                "url": "http://news.bbcimg.co.uk/media/images/51443000/jpg/_51443818_011389726-1.jpg",
+                "width": 304,
+                "height": 171
+              }
+            }
+          }
         ]
-    }
+      },
+      {
+        "title": "Egypt",
+        "beginDate": "2011-01-25",
+        "endDate": "2011-01-25",
+        "map": {
+          "kml": "/data/kml/egypt.kml"
+        },
+        "pages": [
+          {
+            "title": "Egypt",
+            "summary": "Inspired by the uprising in Tunisia and prior to his entry as a central figure in Egyptian politics, potential presidential candidate Mohamed ElBaradei warned of a \"Tunisia-style explosion\" in Egypt.",
+            "showIntro": true,
+            "beginDate": "2011-01-25",
+            "endDate": "2011-02-12",
+            "map": {
+              "center": [30, 26],
+              "zoom": 5,
+              "label": "Egypt"
+            },
+            "quotes": [
+              {
+                "quote": "Our country's condition was getting worse and worse. There was corruption, torture, injustice, inequality and no freedom. Someone had to stand up and say 'enough is enough'",
+                "attribution": "Ahmed Raafat Amin, protester"
+              }
+            ]
+          },
+          {
+            "title": "Protests",
+            "summary": "Protests in Egypt began on 25 January 2011 and ran for 18 days. Beginning around midnight on 28 January, the Egyptian government attempted, somewhat successfully, to eliminate the nation's Internet access, in order to inhibit the protesters' ability use media activism to organize through social media.[192] Later that day, as tens of thousands protested on the streets of Egypt's major cities, President Hosni Mubarak dismissed his government, later appointing a new cabinet. Mubarak also appointed the first Vice President in almost 30 years.",
+            "beginDate": "2011-01-25",
+            "endDate": "2011-02-12",
+            "map": {
+              "center": [10, 10],
+              "label": "Cairo"
+            }
+          }
+        ]
+      },
+      {
+        "title": "Libya",
+        "beginDate": "2011-02-15",
+        "endDate": "2011-02-15",
+        "map": {
+          "kml": "/data/kml/libya.kml"
+        },
+        "pages": [
+          {
+            "title": "Libya",
+            "summary": "The Libyan Civil War, also referred to as the Libyan Revolution was a 2011 armed conflict in the North African country of Libya, fought between forces loyal to Colonel Muammar Gaddafi and those seeking to oust his government.[34][35] The war was preceded by protests in Benghazi beginning on Tuesday, 15 February 2011, which led to clashes with security forces that fired on the crowd.[36] The protests escalated into a rebellion that spread across the country,[37] with the forces opposing Gaddafi establishing an interim governing body, the National Transitional Council.",
+            "showIntro": true,
+            "beginDate": "2011-01-25",
+            "endDate": "2011-02-12",
+            "map": {
+              "center": [21, 27],
+              "zoom": 5,
+              "label": "Libya"
+            },
+            "quotes": [
+              {
+                "quote": "It's freedom. There's no Gaddafi, unbelievable. I feel the freedom. I smell the freedom.",
+                "attribution": "Lamin el-Bijou, Banghazi resident"
+              }
+            ]
+          },
+          {
+            "title": "Protests",
+            "summary": "Protests in Egypt began on 25 January 2011 and ran for 18 days. Beginning around midnight on 28 January, the Egyptian government attempted, somewhat successfully, to eliminate the nation's Internet access, in order to inhibit the protesters' ability use media activism to organize through social media.[192] Later that day, as tens of thousands protested on the streets of Egypt's major cities, President Hosni Mubarak dismissed his government, later appointing a new cabinet. Mubarak also appointed the first Vice President in almost 30 years.",
+            "beginDate": "2011-01-25",
+            "endDate": "2011-02-12",
+            "map": {
+              "center": [10, 10],
+              "label": "Benghazi"
+            }
+          }
+        ]
+      }
+    ]
+  }
 }

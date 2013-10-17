@@ -235,26 +235,60 @@ table {
   position: absolute;
   top: 0;
   right: 10px;
-  width: 300px;
+  width: 340px;
   height: 100%;
   color: #fff;
   background: #000;
   background: rgba(0, 0, 0, 0.9);
 }
+.panels .pi {
+  padding: 20px;
+}
+.page-meta {
+  position: fixed;
+  z-index: 1000;
+  top: 20px;
+  left: 62px;
+  background: black;
+  padding: 2px;
+  color: white;
+}
+.page-meta h4,
+.page-meta h5,
+.page-meta p {
+  padding: 0 14px;
+  font-weight: normal;
+}
+.page-meta h4 {
+  font-size: 20px;
+}
+.page-meta h5 {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 4px;
+}
+.page-meta p {
+  line-height: 19px;
+}
 #chapter-panel {
   z-index: 5000;
   top: 0;
   right: 10px;
+  width: 340px;
   background: #000;
   background: rgba(0, 0, 0, 0.9);
   color: #fff;
   height: 100%;
-  width: 300px;
   background: rgba(0, 0, 0, 0.7);
-  padding: 1px 20px 0 20px;
   position: absolute;
   right: 150px;
   z-index: 6001;
+}
+#chapter-panel .pi {
+  padding: 20px;
+}
+#chapter-panel h1 {
+  margin: 0 0 12px;
 }
 #chapter-panel ol {
   margin: 0;
@@ -314,13 +348,40 @@ table {
   position: absolute;
   top: 0;
   right: 10px;
-  width: 300px;
+  width: 340px;
   height: 100%;
   color: #fff;
   background: #000;
   background: rgba(0, 0, 0, 0.9);
+  width: 384px;
   z-index: 6000;
-  display: none;
+  right: -384px;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+#content-panel .pi {
+  padding: 20px;
+}
+#content-panel .pi {
+  height: 100%;
+}
+#content-panel ol {
+  height: 100%;
+  margin: 0;
+  list-style: none;
+  overflow: scroll;
+}
+#content-panel ol h2 {
+  margin: 0 0 12px;
+}
+#content-panel ol .page {
+  display: block;
+  height: 100%;
+}
+#content-panel.active {
+  margin-right: 408px;
 }
 html,
 body {

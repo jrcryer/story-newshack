@@ -9,6 +9,7 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
          * @var string
          */
         template: _.template(
+          '<div class="pi">' +
           '<ol id="pages">' +
           '<% _.each(pages, function(page, index) { %>' +
             '<li class="page" id="i-<%= index %>">' +
@@ -16,12 +17,8 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
               '<div><%= page.summary %></div>' +
             '</li>' +
           '<% }); %>' +
-          '</ol>'
+          '</ol></div>'
         ),
-
-        events: {
-          'click li': 'onChapterClick'
-        },
 
         /**
          * @var array
@@ -37,11 +34,11 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
             this.$el.html(this.template({
                 pages: this.chapter.pages
             }));
+            this.$el.addClass('active');
         },
 
         setCurrentChapter: function(chapter) {
             this.chapter = chapter;
-            console.log(chapter);
         }
     });
     return ContentPanel;

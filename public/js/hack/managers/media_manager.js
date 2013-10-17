@@ -1,46 +1,57 @@
 /*global define */
 define([
+<<<<<<< HEAD
     'backbone',
     'hack/views/map',
     'hack/views/intro'
 ], function (Backbone, Map, Intro) {
+=======
+  'backbone',
+  'hack/views/map',
+  'hack/views/profile'
+], function(Backbone, Map, Profile) {
+>>>>>>> 713aaa3f444df481a11a1bb6b08d0adbd940185a
 
-    var MediaManager = function(config) {
-        this.config = config;
-        this.view = null;
+  var MediaManager = function(config) {
+    this.config = config;
+    this.view = null;
 
-        Backbone.on('story:page-change', $.proxy(this.setPage, this));
-    };
+    Backbone.on('story:page-change', $.proxy(this.setPage, this));
+  };
 
-    MediaManager.prototype.setPage = function(chapter, page) {
-        this.chapter = chapter;
-        this.page = page;
+  MediaManager.prototype.setPage = function(chapter, page) {
+    this.chapter = chapter;
+    this.page = page;
 
-        if (this.page.map) {
-            this.setMap(this.page.map);
-        }
+    if (this.page.map) {
+      this.setMap(this.page.map);
+    }
 
-        if (this.chapter.map && this.chapter.map.kml) {
-            this.map.setKmlUrl(this.chapter.map.kml);
-        } else {
-            this.map.clearKml();
-        }
+    if (this.chapter.map && this.chapter.map.kml) {
+      this.map.setKmlUrl(this.chapter.map.kml);
+    } else {
+      this.map.clearKml();
+    }
+    if (page.person) {
+       this._profilePanel = new Profile(page.person);
+    } else if (this.hasOwnProperty('_profilePanel')) {
+      this._profilePanel.remove();
+    }
+    if (page.showIntro) {
+        this.setIntro(page);
+    } else if (this.intro) {
+        this.intro.remove();
+    }
+  };
 
-        if (page.showIntro) {
-            this.setIntro(page);
-        } else if (this.intro) {
-            this.intro.remove();
-        }
-        
-    };
 
-    MediaManager.prototype.setMap = function(options) {
-        if (!this.map) {
-            this.map = new Map('map', options);
-        } else {
-            this.map.moveTo(options.center, options.zoom);
-        }
-    };
+  MediaManager.prototype.setMap = function(options) {
+    if (!this.map) {
+      this.map = new Map('map', options);
+    } else {
+      this.map.moveTo(options.center, options.zoom);
+    }
+  };
 
     MediaManager.prototype.setIntro = function(page) {
         this.intro = new Intro({

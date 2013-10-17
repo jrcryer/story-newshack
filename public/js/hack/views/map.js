@@ -35,10 +35,11 @@ define(['jquery'], function($) {
       view: this._view,
       target: elementId,
       layers: [this._baseLayer],
-      renderer: ol.RendererHint.CANVAS
+      renderer: ol.RendererHint.CANVAS,
+      controls: []
     });
 
-  };
+  }
 
   Map.prototype.modifyPositionForScreen = function(position, zoom) {
     offset = 1 * (12 - zoom);
