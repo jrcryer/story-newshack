@@ -293,8 +293,16 @@ table {
   color: #fff;
   background: #000;
   background: rgba(0, 0, 0, 0.9);
+  width: 384px;
   z-index: 6000;
-  display: none;
+  right: -384px;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+#content-panel.active {
+  margin-right: 408px;
 }
 html,
 body {
