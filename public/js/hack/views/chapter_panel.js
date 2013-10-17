@@ -20,11 +20,15 @@ define(['backbone', 'underscore'], function (Backbone, _) {
                 '<% index = (index + 1) > 9 ? index + 1 : "0" + (index + 1); %>'+
                 '<% start = new Date(chapter.beginDate); %>'+
                 '<% end = new Date(chapter.endDate); %>'+
-              '<div class="index"><span><%= index %></span></div>' +
+              '<div class="index">' + 
+                '<div class="inner"><%= index %></div>' + 
+              '</div>' +
               '<div class="title">' +
-                '<span class="wrapper"><%= chapter.title %>' +
-                '<span class="start-date"><%= start.getDay() + " " + months[start.getMonth()] + " " + start.getFullYear() %></span>' +
-                '<span class="end-date"><%= end.getDay() + " " + months[end.getMonth()] + " " + end.getFullYear() %></span></span>' +
+                '<div class="inner">' +
+                  '<div class="chapter-title"><%= chapter.title %></div>' +
+                  '<div class="start-date"><%= start.getDay() + " " + months[start.getMonth()] + " " + start.getFullYear() %></div>' +
+                  '<div class="end-date"><%= end.getDay() + " " + months[end.getMonth()] + " " + end.getFullYear() %></div>' +
+                '</div>' + 
               '</div>' +
             '</li>' +
           '<% }); %>' +
