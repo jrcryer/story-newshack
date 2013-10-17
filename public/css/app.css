@@ -190,10 +190,12 @@ table {
   background: #000;
   background: rgba(0, 0, 0, 0.9);
 }
-.panels.content {
-  z-index: 6000;
-}
 #chapter-panel {
+  z-index: 5000;
+  top: 0;
+  right: 10px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.9);
   color: #fff;
   height: 100%;
   width: 300px;
@@ -256,8 +258,17 @@ table {
   background: #29ABE2;
 }
 #content-panel {
-  display: none;
+  z-index: 5000;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 300px;
+  height: 100%;
+  color: #fff;
+  background: #000;
+  background: rgba(0, 0, 0, 0.9);
   z-index: 6000;
+  display: none;
 }
 html,
 body {
