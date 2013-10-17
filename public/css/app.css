@@ -190,7 +190,7 @@ table {
   background: #000;
   background: rgba(0, 0, 0, 0.9);
 }
-#panels {
+#chapter-panel {
   color: #fff;
   height: 100%;
   width: 300px;
@@ -199,20 +199,20 @@ table {
   position: absolute;
   right: 150px;
 }
-#panels ol {
+#chapter-panel ol {
   margin: 0;
   list-style: none;
 }
-#panels ol li {
+#chapter-panel ol li {
   margin-bottom: 6px;
   position: relative;
 }
-#panels ol li .index,
-#panels ol li .title {
+#chapter-panel ol li .index,
+#chapter-panel ol li .title {
   height: 80px;
   line-height: 1.2;
 }
-#panels ol li .index {
+#chapter-panel ol li .index {
   width: 60px;
   font-size: 32px;
   line-height: 1;
@@ -221,11 +221,11 @@ table {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-#panels ol li .index .inner {
+#chapter-panel ol li .index .inner {
   display: block;
   padding: 8px;
 }
-#panels ol li .title {
+#chapter-panel ol li .title {
   position: absolute;
   left: 62px;
   top: 0;
@@ -235,20 +235,25 @@ table {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-#panels ol li .title .inner {
+#chapter-panel ol li .title .inner {
   display: block;
   padding: 8px;
 }
-#panels ol li .title .chapter-title {
+#chapter-panel ol li .title .chapter-title {
   font-size: 18px;
+  margin-bottom: 4px;
 }
-#panels ol li .title .start-date,
-#panels ol li .title .end-date {
+#chapter-panel ol li .title .start-date,
+#chapter-panel ol li .title .end-date {
   font-size: 14px;
+  margin-bottom: 2px;
 }
-#panels ol li.current .index,
-#panels ol li.current .title {
+#chapter-panel ol li.current .index,
+#chapter-panel ol li.current .title {
   background: #29ABE2;
+}
+#content-panel {
+  z-index: 6000;
 }
 html,
 body {
