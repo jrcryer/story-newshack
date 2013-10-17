@@ -289,6 +289,10 @@ table {
 }
 #chapter-panel h1 {
   margin: 0 0 12px;
+  transition: 0.8s all ease-in;
+}
+#chapter-panel h1.defocus {
+  -webkit-filter: blur(8px);
 }
 #chapter-panel ol {
   margin: 0;
