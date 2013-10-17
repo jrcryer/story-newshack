@@ -46,7 +46,6 @@ require([
     function init(config) {
 
       mediaManager = new Hack.MediaManager(config);
-      mediaManager.setPage(config.storyline.chapters[0], config.storyline.chapters[0].pages[0]);
 
       var chapterPanel = new Hack.ChapterPanel({
         el: '#chapter-panel',

@@ -10,13 +10,30 @@ define([
     this.view = null;
 
     Backbone.on('story:page-change', $.proxy(this.setPage, this));
+
+    if (this.config.storyline.map) {
+      this.config.storyline.map.offsetForIntro = true;
+      this.setMap(this.config.storyline.map);
+    }
+
+    if (this.config.storyline.map && this.config.storyline.map.kml) {
+      this.map.setKmlUrl(this.config.storyline.map.kml);
+    }
+    if (this.config.storyline.showIntro) {
+        this.setIntro(this.config.storyline);
+    }
   };
 
+
   MediaManager.prototype.setPage = function(chapter, page) {
+
     this.chapter = chapter;
     this.page = page;
 
     if (this.page.map) {
+      if (this.page.showIntro) {
+        this.page.map.offsetForIntro = true;
+      }
       this.setMap(this.page.map);
     }
 
@@ -47,7 +64,7 @@ define([
     if (!this.map) {
       this.map = new Map('map', options);
     } else {
-      this.map.moveTo(options.center, options.zoom);
+      this.map.moveTo(options.center, options.zoom, options.offsetForIntro);
     }
   };
 

@@ -16,7 +16,10 @@ define(['jquery'], function($) {
       zoom: 6
     }, options);
 
-    this._options.center = this.modifyPositionForScreen(this._options.center, this._options.zoom);
+    this._options.center = this.modifyPositionForPanels(this._options.center, this._options.zoom);
+    if (this._options.offsetForIntro) {
+      this._options.center = this.modifyPositionForIntro(this._options.center, this._options.zoom);
+    }
 
     this._view = new ol.View2D({
       center: ol.proj.transform(this._options.center, 'EPSG:4326', 'EPSG:3857'),
@@ -96,15 +99,19 @@ define(['jquery'], function($) {
     this._olMap.addLayer(this._featureLayer);
   };
 
-  Map.prototype.modifyPositionForScreen = function(position, zoom) {
-    var offset = (12 - zoom);
+  Map.prototype.modifyPositionForIntro = function(position, zoom) {
+    return [position[0], position[1] + 4];
+  };
+
+  Map.prototype.modifyPositionForPanels = function(position, zoom) {
+    var offset = 1 * (12 - zoom);
     return [position[0] + offset, position[1]];
   };
 
 
   /**
    * Clear kml layer
-   * 
+   *
    * @param {String} url
    */
   Map.prototype.clearKml = function() {
@@ -116,7 +123,7 @@ define(['jquery'], function($) {
 
   /**
    * Add kml layer
-   * 
+   *
    * @param {String} url
    */
   Map.prototype.setKmlUrl = function(url) {
@@ -162,11 +169,14 @@ define(['jquery'], function($) {
    * @param {Number} zoom
    * @param {String} transition
    */
-  Map.prototype.moveTo = function(position, zoom, transition) {
+  Map.prototype.moveTo = function(position, zoom, offsetForIntro) {
 
     var duration, start, viewZoom, panAnimation, zoomAnimation, bounceMultiplier;
 
-    position = this.modifyPositionForScreen(position, zoom);
+    position = this.modifyPositionForPanels(position, zoom);
+    if (offsetForIntro) {
+      position = this.modifyPositionForIntro(position, zoom);
+    }
 
     viewZoom = this._view.getResolution();
     duration = 2000;
@@ -176,7 +186,7 @@ define(['jquery'], function($) {
     panAnimation = ol.animation.pan({
       duration: duration,
       start: start,
-      source: this._view.getCenter(),
+      source: this._view.getCenter()
     });
 
     if (zoom === viewZoom) {
