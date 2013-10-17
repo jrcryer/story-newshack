@@ -1,5 +1,5 @@
 {
-    "db": "mongodb://localhost/mean",
+    "db": process.env.OPENSHIFT_MONGODB_DB_URL,
     "app": {
         "name": "MEAN - A Modern Stack - Production"
     }
