@@ -2,3 +2,6 @@
 .nodemonignore
 .sass-cache/
 public/lib
+*.iml
+.idea
+*.swp
