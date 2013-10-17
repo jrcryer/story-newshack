@@ -1,5 +1,5 @@
 /*global define */
-define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
+define(['backbone', 'underscore'], function (Backbone, _) {
 
     var ChapterPanel = Backbone.View.extend({
 
@@ -69,7 +69,13 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
          * Handles a click event on a particular chapter
          */
         onChapterClick: function(e) {
-            var chapter = this.chapters[$(e.currentTarget).data().index];
+            var el      = this.$el.find(e.currentTarget);
+            var chapter = this.chapters[el.data().index];
+
+            this.$el.find('.current').removeClass('current');
+            el.addClass('current');
+
+
             Backbone.trigger('story:page-change', chapter, chapter.pages[0]);
             e.preventDefault();
         }
