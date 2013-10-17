@@ -41,8 +41,63 @@ define(['jquery'], function($) {
 
   }
 
+  /**
+   * Remove all the feature from the map
+   */
+  Map.prototype.removeFeatures = function() {
+    if (this.hasOwnProperty('_featureLayer')) {
+      this._olMap.removeLayer(this._featureLayer);
+    }
+  };
+
+  /**
+   * Add a new feature to the map.
+   *
+   * @param {Array} features
+   */
+  Map.prototype.addFeatures = function(features) {
+
+    var style, data;
+
+    this.removeFeatures(); // clear all features before adding any
+
+    style = new ol.style.Style({
+      symbolizers: [
+        new ol.style.Icon({
+          url: '/images/map_marker.png',
+          offset: -22
+        })
+      ]
+    });
+
+    data = {
+      type: 'FeatureCollection',
+      features: []
+    };
+
+    $(features).each(function(i, feature) {
+      data.features.push({
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: feature.position
+        }
+      });
+    });
+
+    this._featureLayer = new ol.layer.Vector({
+      source: new ol.source.Vector({
+        parser: new ol.parser.GeoJSON(),
+        data: data
+      }),
+      style: style
+    });
+
+    this._olMap.addLayer(this._featureLayer);
+  };
+
   Map.prototype.modifyPositionForScreen = function(position, zoom) {
-    offset = 1 * (12 - zoom);
+    var offset = (12 - zoom);
     return [position[0] + offset, position[1]];
   };
 
