@@ -79,7 +79,8 @@ define(['backbone', 'underscore'], function (Backbone, _) {
             this.$el.find('.current').removeClass('current');
             el.addClass('current');
 
-
+            this.$el.find('h1').addClass('defocus');
+            
             Backbone.trigger('story:page-change', chapter, chapter.pages[0]);
             e.preventDefault();
         }
