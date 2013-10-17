@@ -6,6 +6,9 @@
                 "title": "Tunisia",
                 "beginDate": "2010-12-01",
                 "endDate": "2010-12-01",
+                "map": {
+                    "kml": "/data/kml/tunisia.kml"
+                },
                 "pages": [
                     {
                         "title": "Tunisia",
@@ -75,6 +78,9 @@
                 "title": "Egypt",
                 "beginDate": "2011-01-25",
                 "endDate": "2011-01-25",
+                "map": {
+                    "kml": "/data/kml/egypt.kml"
+                },
                 "pages": [
                     {
                         "title": "Egypt",
@@ -109,6 +115,9 @@
                 "title": "Libya",
                 "beginDate": "2011-02-15",
                 "endDate": "2011-02-15",
+                "map": {
+                    "kml": "/data/kml/libya.kml"
+                },
                 "pages": [
                     {
                         "title": "Libya",

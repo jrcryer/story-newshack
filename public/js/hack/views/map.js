@@ -32,9 +32,79 @@ define(['jquery'], function($) {
     this._olMap = new ol.Map({
       view: this._view,
       target: elementId,
-      layers: [this._baseLayer]
+      layers: [this._baseLayer],
+      renderer: ol.RendererHint.CANVAS
     });
+
   }
+
+  /**
+   * Clear kml layer
+   * 
+   * @param {String} url
+   */
+  Map.prototype.clearKml = function() {
+    if (this._vectorLayer) {
+      this._olMap.removeLayer(this._vectorLayer);
+      this._vectorLayerUrl = undefined;
+    }
+  };
+
+  /**
+   * Add kml layer
+   * 
+   * @param {String} url
+   */
+  Map.prototype.setKmlUrl = function(url) {
+
+    if (this._vectorLayer) {
+      if (this._vectorLayerUrl === url) {
+        return;
+      } else {
+        this.clearKml();
+      }
+    }
+
+    this._vectorLayerUrl = url;
+    this._vectorLayer = new ol.layer.Vector({
+      source: new ol.source.Vector({
+        parser: new ol.parser.KML(),
+        url: url
+      }),
+      style: new ol.style.Style({rules: [
+        new ol.style.Rule({
+          symbolizers: [
+            new ol.style.Fill({
+              color: 'white',
+              opacity: 0
+            }),
+            new ol.style.Stroke({
+              color: '#29ABE2',
+              opacity: 1,
+              width: 4
+            })
+          ]
+        }),
+        new ol.style.Rule({
+          maxResolution: 5000,
+          symbolizers: [
+            new ol.style.Text({
+              color: 'black',
+              text: ol.expr.parse('name'),
+              fontFamily: 'Calibri,sans-serif',
+              fontSize: 12,
+              stroke: new ol.style.Stroke({
+                color: 'white',
+                width: 3
+              })
+            })
+          ]
+        })
+      ]})
+    });
+
+    this._olMap.addLayer(this._vectorLayer);
+  };
 
   /**
    * Move to a destination on the map.

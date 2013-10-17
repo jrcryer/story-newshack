@@ -18,6 +18,12 @@ define([
         if (this.page.map) {
             this.setMap(this.page.map);
         }
+
+        if (this.chapter.map && this.chapter.map.kml) {
+            this.map.setKmlUrl(this.chapter.map.kml);
+        } else {
+            this.map.clearKml();
+        }
     };
 
     MediaManager.prototype.setMap = function(options) {
