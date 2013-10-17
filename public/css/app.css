@@ -173,8 +173,41 @@ table {
   width: 100%;
   height: 100%;
 }
+#panels {
+  color: #fff;
+  height: 100%;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1px 1rem 0 1rem;
+  position: absolute;
+  right: 150px;
+}
+#panels ol {
+  margin: 0;
+  list-style: none;
+}
+#panels ol li {
+  background: #7991A5;
+  margin-bottom: 6px;
+  clear: left;
+  overflow: auto;
+  padding: .5rem;
+  border-radius: 4px;
+}
+#panels ol li .index {
+  float: left;
+  font-size: 1.3rem;
+  margin-right: .5rem;
+}
+#panels ol li:hover {
+  background: #29ABE2;
+}
 html,
 body {
   height: 100%;
   width: 100%;
+}
+.app {
+  height: 100%;
+  background: #555;
 }

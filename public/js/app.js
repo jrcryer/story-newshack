@@ -32,7 +32,7 @@ require([
     $(function() {
         new Hack.ChapterPanel({
             el: '#panels',
-            title: 'Arab Spring',
+            title: 'Key Events',
             chapters: [{
                 title: 'Title A'
             }, {
