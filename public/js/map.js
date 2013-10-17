@@ -1,5 +1,5 @@
 /*global ol */
-(function(){
+jQuery(function($){
 
   // THIS FILE IS JUST FOR /map ROUTE TO PLAY/DEBUG OL3 STUFF
   var map = new ol.Map({
@@ -17,4 +17,4 @@
     renderers: ol.RendererHints.createFromQueryData()
   });
 
-}());
+});
