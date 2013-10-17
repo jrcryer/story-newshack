@@ -20,7 +20,7 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
             '<% start = new Date(chapter.beginDate); %>'+
             '<% end = new Date(chapter.endDate); %>'+
             '<li data-index="<%= index %>">' +
-              '<div class="index"><%= index %></div>' +
+              '<div class="index"><span><%= index %></span></div>' +
               '<div class="title">' +
                 '<%= chapter.title %>' +
                 '<span class="start-date"><%= start.getDay() + " " + months[start.getMonth()] + " " + start.getFullYear() %></span>' +
