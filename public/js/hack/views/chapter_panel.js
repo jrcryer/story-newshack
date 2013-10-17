@@ -22,9 +22,9 @@ define(['backbone', 'underscore'], function (Backbone, _) {
                 '<% end = new Date(chapter.endDate); %>'+
               '<div class="index"><span><%= index %></span></div>' +
               '<div class="title">' +
-                '<%= chapter.title %>' +
+                '<span class="wrapper"><%= chapter.title %>' +
                 '<span class="start-date"><%= start.getDay() + " " + months[start.getMonth()] + " " + start.getFullYear() %></span>' +
-                '<span class="end-date"><%= end.getDay() + " " + months[end.getMonth()] + " " + end.getFullYear() %></span>' +
+                '<span class="end-date"><%= end.getDay() + " " + months[end.getMonth()] + " " + end.getFullYear() %></span></span>' +
               '</div>' +
             '</li>' +
           '<% }); %>' +

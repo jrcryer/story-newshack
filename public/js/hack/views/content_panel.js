@@ -10,9 +10,10 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
          */
         template: _.template(
           '<ol id="pages">' +
-          '<% _.each(pages, function(pages, index) { %>' +
-            '<li>' +
-              '<div class="index"><%= index + 1 %></div>' +
+          '<% _.each(pages, function(page, index) { %>' +
+            '<li class="page" id="i-<%= index %>">' +
+              '<h2><%= page.title %></h2>' +
+              '<div><%= page.summary %></div>' +
             '</li>' +
           '<% }); %>' +
           '</ol>'
@@ -34,7 +35,7 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
                 return;
             }
             this.$el.html(this.template({
-                pages: this.pages
+                pages: this.chapter.pages
             }));
         },
 
