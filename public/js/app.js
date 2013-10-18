@@ -34,7 +34,7 @@ require([
     var mediaManager;
 
     $.ajax({
-      url: 'data/stories/arab_spring.json',
+      url: 'data/stories/' +storyId +'.json',
       success: function(config) {
         init(config);
       },

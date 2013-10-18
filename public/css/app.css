@@ -228,7 +228,26 @@ table {
   position: absolute;
   top: 75px;
   left: 20px;
-  width: 65%;
+  width: 60%;
+}
+#timeline-container {
+  z-index: 5002;
+  position: absolute;
+  width: 100%;
+}
+#timeline {
+  display: block;
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 60%;
+  color: #fff;
+}
+#timeline p {
+  font-size: 1.6em;
+  line-height: 1.6;
 }
 .panels {
   z-index: 5000;
@@ -248,7 +267,7 @@ table {
   position: absolute;
   z-index: 1000;
   top: 20px;
-  left: -300px;
+  left: -320px;
   background: black;
   padding: 2px;
   color: white;
@@ -340,6 +359,7 @@ div.quote p.attribution {
   line-height: 1.2;
 }
 #chapter-panel ol li .index {
+  position: relative;
   width: 60px;
   font-size: 32px;
   line-height: 1;
@@ -419,17 +439,39 @@ div.quote p.attribution {
 #content-panel ol h2 {
   margin: 0 0 12px;
 }
-#content-panel ol .page {
+#content-panel .page {
   display: block;
   height: 100%;
+  background: url(/images/chevron.png) 50% 90% no-repeat;
+}
+#content-panel .page:last-child {
+  background: none;
 }
 #content-panel.active {
-  margin-right: 384px;
+  margin-right: 380px;
+}
+.progress-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80px;
+  width: 8px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.progress-bar .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  background: #8cc63e;
+  height: 20px;
+  transition: 0.8s all ease-in-out;
 }
 html,
 body {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 #media,
 section {
