@@ -23,8 +23,8 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
                     '<h2><%= chapter.title %></h2>' +
                     '<% _.each(pages, function(page, index) { %>' +
                         '<% if (index > 0) { %>' +
-                            '<% start = moment(page.beginDate).format("Do MMMM YYYY"); %>'+
-                            '<% end = moment(page.endDate).format("Do MMMM YYYY"); %>'+
+                            '<% start = moment(page.beginDate).format("D MMMM YYYY"); %>'+
+                            '<% end = moment(page.endDate).format("D MMMM YYYY"); %>'+
                             '<div class="jump">' +
                                 '<a href="#i-<%= index %>">' +
                                     '<span class="event"><%= page.title %></span>' +
@@ -36,8 +36,18 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
                     '<% }); %>' +
                 '</div>'+
             '<% } else { %>' +
+                '<% start = moment(page.beginDate).format("Do MMMM YYYY"); %>' +
+                '<% end = moment(page.endDate).format("Do MMMM YYYY"); %>' +
+                '<% startDay = moment(page.beginDate).format("D"); %>' +
+                '<% endDay = moment(page.endDate).format("D"); %>' +
+                '<% startMon = moment(page.beginDate).format("MMMM YYYY"); %>' +
+                '<% endMon = moment(page.endDate).format("MMMM YYYY"); %>' +
                 '<div class="page" id="i-<%= index %>">' +
                     '<h2><%= page.title %></h2>' +
+                    '<div class="page-times"><span class="day"><%= startDay %></span> <span class="mon"><%= startMon %></span></div>' +
+                    '<% if (start !== end) { %>' +
+                        '<div class="page-times"><span class="day"><%= endDay %></span> <span class="mon"><%= endMon %></span></div>' +
+                    '<% } %>' +
                     '<div><%= page.summary %></div>' +
                 '</div>' +
             '<% } %>'+

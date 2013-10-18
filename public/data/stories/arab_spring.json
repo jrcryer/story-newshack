@@ -44,7 +44,7 @@
           },
           {
             "title": "Suicide protestor dies",
-            "summary": "<p>Mohammed Bouazizi, a Tunisian graduate whose attempted suicide set off violent protests over unemployment across the North Africa nation has died.</p><ul><li>Syria is a nation of about 21 million people -- roughly 2 million more than the population of New York state. It sits on the eastern shore of the Mediterranean Sea in the Middle East.</li><li>The nation is about the same size as Washington state and slightly larger than North Dakota.</li><li>Syria is run by the minority sect known as Alawites, which make up 11.8 percent of the population.</li></ul>",
+            "summary": "<p>Mohammed Bouazizi, a Tunisian graduate whose attempted suicide set off violent protests over unemployment across the North Africa nation has died.</p>",
             "beginDate": "2010-12-17",
             "endDate": "2010-12-17",
             "map": {
@@ -177,6 +177,23 @@
               "center": [20.0667, 32.1167],
               "zoom": 10,
               "label": "Benghazi"
+            }
+          },
+          {
+            "title": "Gaddafi killed",
+            "summary": "Libya's ex-leader Col Muammar Gaddafi has been killed after an assault on his birthplace of Sirte, officials say. Acting Prime Minister Mahmoud Jibril announced the death, and later said the colonel had been killed in a crossfire between Gaddafi loyalists and fighters from the transitional authorities.",
+            "beginDate": "2011-10-20",
+            "endDate": "2011-10-20",
+            "map": {
+              "center": [10, 10],
+              "zoom": 10,
+              "label": "Sirte",
+              "features": [
+                {
+                  "label": "Gaddafi killed in Sirte",
+                  "position": [16.58866,31.20892 ]                
+                }
+              ]
             }
           },
           {
