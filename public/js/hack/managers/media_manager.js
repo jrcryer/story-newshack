@@ -60,15 +60,6 @@ define([
       this._profilePanel.remove();
     }
 
-    if (page.quotes && page.quotes.length > 0) {
-      if (this._quotePanel) {
-        this._quotePanel.remove();
-      }
-      this._quotePanel = new Quote(page.quotes[0]);
-    } else if(this._quotePanel) {
-      this._quotePanel.remove();
-    }
-
     if (true === page.showIntro) {
       this.setIntro(page);
       this.setTimeline(page);
