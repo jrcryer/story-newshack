@@ -52,8 +52,14 @@
             "endDate": "2013-06-09",
             "map": {
               "center": [114.15769,22.28552],
-              "zoom": 8,
-              "label": "Hong Kong"
+              "zoom": 10,
+              "label": "Hong Kong",
+              "features": [
+              {
+                  "label": "The Mira Hotel",
+                  "position": [114.17021,22.30033]
+              }
+              ]
             }
           },
           {
