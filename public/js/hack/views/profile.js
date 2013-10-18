@@ -1,4 +1,4 @@
-define(['jquery'], function($){
+define(['jquery', 'moment'], function($, moment){
 
   /**
    * Creates a new widget in the top left of the page to show additional,
@@ -15,6 +15,12 @@ define(['jquery'], function($){
     html += '<h4>Key Figures</h4>';
     html += '<img src="' + person.image.url + '" width="' + person.image.width + '" />';
     html += '<h5>' + person.name + '</h5>';
+    if (undefined !== person.born) {
+      html += '<p class="date">Born: ' + moment(person.born).format('Do MMM YYYY') + '</p>';
+    }
+    if (undefined !== person.died) {
+      html += '<p class="date">Died: ' + moment(person.died).format('Do MMM YYYY') + '</p>';
+    }
     html += '<p>' + person.summary + '</p>';
     html += '</div>';
 
