@@ -317,6 +317,7 @@ table {
   line-height: 1.2;
 }
 #chapter-panel ol li .index {
+  position: relative;
   width: 60px;
   font-size: 32px;
   line-height: 1;
@@ -386,12 +387,14 @@ table {
 }
 #content-panel .pi {
   height: 100%;
+  padding: 20px 10px;
 }
 #content-panel ol {
   height: 100%;
   margin: 0;
   list-style: none;
   overflow: auto;
+  padding: 0 10px;
 }
 #content-panel ol h2 {
   margin: 0 0 12px;
@@ -405,7 +408,24 @@ table {
   background: none;
 }
 #content-panel.active {
-  margin-right: 384px;
+  margin-right: 380px;
+}
+.progress-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80px;
+  width: 8px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.progress-bar .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  background: #8cc63e;
+  height: 20px;
+  transition: 0.8s all ease-in-out;
 }
 html,
 body {
@@ -425,6 +445,7 @@ section {
 /* Let's get this party started */
 ::-webkit-scrollbar {
   width: 6px;
+  padding: 20px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
