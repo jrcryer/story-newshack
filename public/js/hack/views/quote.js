@@ -18,14 +18,14 @@ define(['jquery'], function($){
     this.$html = $(html);
     //this.$html.hide();
 
+    $('.quote').remove();
     $('body').append(this.$html);
+
+    $('.quote').css('opacity', 1);
   }
 
   Quote.prototype.remove = function() {
     $('.quote').css('opacity', 0);
-    //this.$html.fadeOut(400, function(){
-    //  $(this).remove();
-    //});
   };
 
   return Quote;

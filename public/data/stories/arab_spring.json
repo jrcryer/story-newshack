@@ -152,7 +152,6 @@
               "zoom": 5,
               "label": "Libya"
             },
-            "image": "/images/lots-of-people.jpg",
             "quote": {
                 "quote": "It's freedom. There's no Gaddafi, unbelievable. I feel the freedom. I smell the freedom.",
                 "attribution": "Lamin el-Bijou, Banghazi resident"
@@ -167,8 +166,29 @@
               "center": [10, 10],
               "zoom": 10,
               "label": "Benghazi"
-            },
-            "image": "/images/riot-van.jpg"
+            }
+          },
+          {
+            "title": "Needs title",
+            "summary": "TBC.",
+            "beginDate": "2011-01-25",
+            "endDate": "2011-02-12",
+            "image": "/images/lots-of-people.jpg",
+            "quote": {
+                "quote": "It's freedom. There's no Gaddafi, unbelievable. I feel the freedom. I smell the freedom.",
+                "attribution": "Lamin el-Bijou, Banghazi resident"
+            }
+          },
+          {
+            "title": "Needs title",
+            "summary": "TBC.",
+            "beginDate": "2011-01-25",
+            "endDate": "2011-02-12",
+            "image": "/images/riot-van.jpg",
+            "quote": {
+                "quote": "It's freedom. There's no Gaddafi, unbelievable. I feel the freedom. I smell the freedom.",
+                "attribution": "Lamin el-Bijou, Banghazi resident"
+            }
           }
         ]
       }
