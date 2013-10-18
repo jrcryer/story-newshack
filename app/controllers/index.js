@@ -6,9 +6,15 @@ var mongoose = require('mongoose'),
   _ = require('underscore');
 
 
+var storyId = 'arab_spring';
+
 exports.render = function(req, res) {
+    if (undefined !== req.params.storyId) {
+        storyId = req.params.storyId;
+    }
     res.render('index', {
         title: 'Storyline',
+        storyId: storyId,
         user: req.user ? JSON.stringify(req.user) : "null"
     });
 };
