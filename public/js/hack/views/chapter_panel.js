@@ -48,12 +48,19 @@ define(['backbone', 'underscore'], function (Backbone, _) {
         chapters: [],
 
         /**
+         * Bar Height
+         */
+        barHeight: 20,
+
+        /**
          * Initialize and setup event listening
          *
          */
         initialize: function(options) {
             this.title = 'Key Events';
             this.chapters = options.storyline.chapters;
+        
+            Backbone.on('story:page-change', this.updateProgressBar, this);
         },
 
         /**
@@ -81,8 +88,40 @@ define(['backbone', 'underscore'], function (Backbone, _) {
 
             this.$el.find('h1').addClass('defocus');
 
+            this.renderProgressBar(chapter);
+
             Backbone.trigger('story:chapter-change', chapter);
             e.preventDefault();
+        },
+
+
+        renderProgressBar: function(chapter) {
+            var progressBar,
+                index,
+                bar;
+           
+            this.$el.find('.progress-bar').remove();
+
+            progressBar = $('<div class="progress-bar"><div class="bar"></div></div>'); 
+            bar = progressBar.find('.bar');
+            index = this.$el.find('.current .index');
+        
+            this.barHeight = index.height() / chapter.pages.length;
+            bar.css({height: this.barHeight});
+
+            index.append(progressBar);
+
+            // bind to page change event
+        },
+
+        updateProgressBar: function(chapter, page, index) {
+            var topPos;
+
+            topPos = this.barHeight * index;
+
+            this.$el.find('.bar').css({
+                top: topPos 
+            });
         }
     });
     return ChapterPanel;
