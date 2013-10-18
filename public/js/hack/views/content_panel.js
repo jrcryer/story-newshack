@@ -23,8 +23,14 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
                     '<h2><%= chapter.title %></h2>' +
                     '<% _.each(pages, function(page, index) { %>' +
                         '<% if (index > 0) { %>' +
+                            '<% start = moment(page.beginDate).format("Do MMMM YYYY"); %>'+
+                            '<% end = moment(page.endDate).format("Do MMMM YYYY"); %>'+
                             '<div class="jump">' +
-                                '<a href="#i-<%= index %>"><%= page.title %></a>' +
+                                '<a href="#i-<%= index %>">' +
+                                    '<span class="event"><%= page.title %></span>' +
+                                    '<span class="times"><%= start %></span>' +
+                                    '<span class="times"><%= end %></span>' +
+                                '</a>' +
                             '</div>' +
                         '<% } %>' +
                     '<% }); %>' +
@@ -47,7 +53,8 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
         initialize: function() {
             _.bindAll(this, 'onScroll');
             _.bindAll(this, 'onAnimationComplete');
-            $(window).on("mousewheel", this.$el, this.onScroll);
+            this.$el.on("mousewheel, DOMMouseScroll", '#pages', this.onScroll);
+            this.$el.on("touchmove", '#pages', this.onScroll);
         },
 
         onScroll: function(e) {
