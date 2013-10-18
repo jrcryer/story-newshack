@@ -21,7 +21,7 @@
         "pages": [
           {
             "title": "Tunisia",
-            "summary": "Overthrow of Zine El Abidine Ben Ali; Ben Ali flees into exile in Saudi Arabia.", 
+            "summary": "Overthrow of Zine El Abidine Ben Ali; Ben Ali flees into exile in Saudi Arabia.",
             "showIntro": true,
             "beginDate": "2010-12-01",
             "endDate": "2010-12-31",
@@ -43,7 +43,7 @@
           },
           {
             "title": "Demonstrations",
-            "summary": "A series of increasingly violent street demonstrations through December.",
+            "summary": "<p>A series of increasingly violent street demonstrations through December.</p><p style='margin-top: 24px;'><img src='/images/random-stats.png' /></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lorem pulvinar, dignissim nunc quis, condimentum magna. Mauris ultricies ornare aliquet. Aliquam felis tellus, faucibus ut hendrerit a, feugiat ut libero. Ut vel odio a est luctus venenatis quis in ante. Nullam nec felis nunc.</p><p>Phasellus luctus metus vel risus ultricies feugiat. Vivamus lacus diam, dictum in ipsum a, dapibus accumsan erat</p>",
             "beginDate": "2010-12-01",
             "endDate": "2010-12-31",
             "image": "/images/cfe7cb97a76b8b07e90e6a706700d21a_0.jpg"
