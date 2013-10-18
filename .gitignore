@@ -2,8 +2,8 @@
 .nodemonignore
 .sass-cache/
 public/lib
+public/css/app.css
 *.iml
 .idea
 *.swp
 node_modules/*
-app.css

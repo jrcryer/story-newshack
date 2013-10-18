@@ -3,6 +3,8 @@
     "title": "Edward Snowden",
     "summary": "Edward Snowden went on the run earlier this year, taking with him vast amounts of secret information belonging to the US government's security services.",
     "showIntro": true,
+    "beginDate": "2013-06-06",
+    "endDate": "2013-06-06",
     "map": {
       "center": [80, 40],
       "zoom": 2
@@ -46,10 +48,46 @@
         "pages": [
           {
             "title": "Hong Kong",
-            "summary": "9 June: Edward Snowden, 29, is named as the source of the intelligence leaks. Speaking from Hong Kong, he explains why he went public.",
+            "summary": "Edward Snowden named and in Hong Kong.",
             "showIntro": true,
             "beginDate": "2013-06-09",
             "endDate": "2013-06-09",
+            "map": {
+              "center": [114.15769,22.28552],
+              "zoom": 8,
+              "label": "Hong Kong",
+              "features": [
+              {
+                  "label": "The Mira Hotel",
+                  "position": [114.17021,22.30033]
+              }
+              ]
+            }
+          },
+          {
+            "title": "Hong Kong",
+            "summary": "9 June: Edward Snowden, 29, is named as the source of the intelligence leaks. Speaking from Hong Kong, he explains why he went public.",
+            "showIntro": false,
+            "beginDate": "2013-06-09",
+            "endDate": "2013-06-09",
+            "map": {
+              "center": [114.17021,22.30033],
+              "zoom": 10,
+              "label": "Hong Kong",
+              "features": [
+              {
+                  "label": "The Mira Hotel",
+                  "position": [114.17021,22.30033]
+              }
+              ]
+            }
+          },
+          {
+            "title": "US spy leaker Edward Snowden missing in Hong Kong",
+            "summary": "The man who has revealed he is the source of leaks about the massive American surveillance programme has gone missing. It is believed Edward Snowden is still in Hong Kong, although he has left the hotel where he was staying. If the former CIA employee is extradited and prosecuted he could face decades in jail. A petition posted by supporters on the White House website, hailing him a \"national hero\" and calling for his immediate pardon, is gathering thousands of signatures. ",
+            "showIntro": false,
+            "beginDate": "2013-06-10",
+            "endDate": "2013-06-10",
             "map": {
               "center": [114.15769,22.28552],
               "zoom": 8,
@@ -57,11 +95,16 @@
             }
           },
           {
-            "title": "US spy leaker Edward Snowden leaves Hong Kong hotel",
-            "summary": "An ex-CIA employee who leaked details of US top-secret phone and internet surveillance has disappeared from his hotel in Hong Kong.",
+            "title": "NSA leaks: US seeks Snowden extradition from Hong Kong",
+            "summary": "The White House has contacted Hong Kong for the extradition of US intelligence fugitive Edward Snowden, who leaked details of secret surveillance. The Obama administration confirmed to the BBC that it had asked for his transfer under an agreement between the US and the Chinese territory. 7A senior administration official was quoted as saying failure to act soon could \"complicate relations\"",
             "showIntro": false,
-            "beginDate": "2013-06-11",
-            "endDate": "2013-06-11"
+            "beginDate": "2013-06-23",
+            "endDate": "2013-06-23",
+            "map": {
+              "center": [114.15769,22.28552],
+              "zoom": 8,
+              "label": "Hong Kong"
+            }
           }
         ]
       },

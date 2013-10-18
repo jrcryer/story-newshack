@@ -232,22 +232,62 @@ table {
 }
 #timeline-container {
   z-index: 5002;
-  position: absolute;
   width: 100%;
+  height: 130px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 50%, #000000 99%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.65)), color-stop(99%, #000000));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 50%, #000000 99%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 50%, #000000 99%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 50%, #000000 99%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 50%, #000000 99%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0);
+  /* IE6-8 */
+
+}
+#timeline-wrapper {
+  position: relative;
 }
 #timeline {
-  display: block;
-  width: 100%;
-  height: 150px;
   position: absolute;
-  bottom: 20px;
+  top: 76px;
   left: 20px;
-  width: 60%;
+  display: block;
   color: #fff;
+  height: 35px;
+  border-bottom: 2px solid #8cc63f;
 }
 #timeline p {
-  font-size: 1.6em;
-  line-height: 1.6;
+  font-size: 1.4em;
+  line-height: 1;
+}
+#timeline p span {
+  font-size: 1.4em;
+}
+#timeline p.begin {
+  position: absolute;
+  left: 0;
+}
+#timeline p.end {
+  position: absolute;
+  right: 0;
 }
 .panels {
   z-index: 5000;
@@ -302,6 +342,13 @@ div.quote {
   bottom: 20px;
   left: 20px;
   color: white;
+  background: #000;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
 }
 div.quote p.quote-marks {
   font-weight: bold;
@@ -309,6 +356,10 @@ div.quote p.quote-marks {
   margin: 0;
   padding: 0;
   line-height: 5px;
+  height: 30px;
+  display: block;
+  padding-top: 35px;
+  margin-bottom: -15px;
 }
 div.quote p.text {
   font-family: Georgia, Times, 'Times New Roman', serif;
@@ -318,6 +369,22 @@ div.quote p.text {
 }
 div.quote p.attribution {
   font-size: 18px;
+}
+div.quote-with-timeline {
+  bottom: 70px;
+}
+div.image-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 #chapter-panel {
   z-index: 5000;
@@ -352,6 +419,8 @@ div.quote p.attribution {
   margin-bottom: 6px;
   position: relative;
   cursor: pointer;
+  /* WARNING!! These styles are duplicated in hovered-title */
+
 }
 #chapter-panel ol li .index,
 #chapter-panel ol li .title {
@@ -404,6 +473,31 @@ div.quote p.attribution {
 }
 #chapter-panel li:hover .index {
   background: #86A5AD;
+}
+#hovered-title {
+  position: absolute;
+  width: 360px;
+  height: 80px;
+  color: #fff;
+  background: #86A5AD !important;
+  z-index: 20000;
+  background: #7991A5;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#hovered-title .inner {
+  display: block;
+  padding: 8px;
+}
+#hovered-title .chapter-title {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+#hovered-title .start-date,
+#hovered-title .end-date {
+  font-size: 14px;
+  margin-bottom: 2px;
 }
 #content-panel {
   z-index: 5000;

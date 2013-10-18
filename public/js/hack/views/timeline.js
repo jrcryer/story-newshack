@@ -1,5 +1,5 @@
 /*global define */
-define(['backbone', 'underscore'], function (Backbone, _) {
+define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
 
     var Timeline = Backbone.View.extend({
 
@@ -12,9 +12,11 @@ define(['backbone', 'underscore'], function (Backbone, _) {
          * @var string
          */
         template: _.template(
+          '<div id="timeline-wrapper">' +
           '<div id="timeline">' +
-          '<p class="begin"><%= begin %></p>' +
-          '<p class="end"><%= end %></p>' +
+          '<p class="begin"><span><%= beginDay %></span> <%= begin %></p>' +
+          '<p class="end"><span><%= endDay %></span> <%= end %></p>' +
+          '</div>' +
           '</div>'
         ),
 
@@ -31,12 +33,19 @@ define(['backbone', 'underscore'], function (Backbone, _) {
          *
          */
         render: function() {
-            this.$el.html('');
+            var begin = moment(this.page.beginDate),
+                end = moment(this.page.endDate);
 
+            this.$el.html('');
             this.$el.html(this.template({
-                begin: new Date(this.page.beginDate).toString('dddd, MMMM ,yyyy'),
-                end: new Date(this.page.endDate).toString('dddd, MMMM ,yyyy')
+                begin: begin.format("MMMM YYYY"),
+                beginDay: begin.format("Do"),
+                end: end.format('MMMM YYYY'),
+                endDay: end.format('Do')
             }));
+
+            var availableWidth = window.innerWidth - 500;
+            this.$el.find('#timeline').css('width', availableWidth);
         }
     });
     return Timeline;

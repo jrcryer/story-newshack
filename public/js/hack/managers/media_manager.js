@@ -34,6 +34,12 @@ define([
     this.chapter = chapter;
     this.page = page;
 
+    if (this.page.image) {
+      this.displayImage();
+    } else if (this._imageLayer) {
+      this._imageLayer.remove();
+    }
+
     if (this.page.map) {
       if (this.page.showIntro) {
         this.page.map.offsetForIntro = true;
@@ -65,12 +71,48 @@ define([
       this.setTimeline(page);
     } else if (this.intro) {
       this.intro.$el.find('#intro').fadeOut();
-      this.timeline.$el.find('#timeline').fadeOut();
+      $('#timeline-container').fadeOut();
       this.intro = undefined;
       this.timeline = undefined;
     }
+
+    if (page.quote) {
+      this.setQuote(page.quote, page.showIntro);
+    } else {
+      this.quote.remove();
+      this.quote = undefined;
+    }
   };
 
+  /**
+   * Display image background in place of a map
+   */
+  MediaManager.prototype.displayImage = function() {
+
+    var html;
+
+    this.removeImage(); // remove any other images
+
+    html = '<div class="image-bg"></div>';
+    this._imageLayer = $(html);
+    this._imageLayer.css({
+      'background-image': 'url(' + this.page.image + ')'
+    });
+    this._imageLayer.hide();
+    $('#map').before(this._imageLayer);
+    this._imageLayer.fadeIn(400);
+  };
+
+  /**
+   * Remove the image background
+   */
+  MediaManager.prototype.removeImage = function() {
+    if (this._imageLayer) {
+      this._imageLayer.fadeOut(400, function(){
+        $(this).remove();
+      });
+    }
+  };
 
   MediaManager.prototype.setMap = function(options) {
     if (!this.map) {
@@ -88,7 +130,12 @@ define([
     this.intro.render();
   };
 
+  MediaManager.prototype.setQuote = function(quote, withTimeline) {
+    this.quote = new Quote(quote, withTimeline);
+  };
+
   MediaManager.prototype.setTimeline = function(page) {
+    $('#timeline-container').show();
     this.timeline = new Timeline({
       el: '#timeline-container',
       page: page
