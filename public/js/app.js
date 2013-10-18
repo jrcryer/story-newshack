@@ -4,7 +4,8 @@ require.config({
     jquery: '/lib/jquery/jquery',
     app: 'hack/app',
     underscore: '/lib/underscore/underscore',
-    backbone: '/lib/backbone/backbone'
+    backbone: '/lib/backbone/backbone',
+    moment: '/lib/moment/moment'
   },
   shim: {
     'underscore': {
