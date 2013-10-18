@@ -52,7 +52,6 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
         },
 
         onScroll: function(e) {
-            console.log('hello!!!');
             var el          = this.$el.find('#pages');
 
             var position   = $(el).scrollTop();
