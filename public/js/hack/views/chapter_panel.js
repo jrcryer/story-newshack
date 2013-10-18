@@ -17,8 +17,8 @@ define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
           '<% _.each(chapters, function(chapter, index) { %>' +
             '<li data-index="<%= index %>">' +
                 '<% index = (index + 1) > 9 ? index + 1 : "0" + (index + 1); %>'+
-                '<% start = moment(chapter.beginDate).format("Do MMMM YYYY"); %>'+
-                '<% end = moment(chapter.endDate).format("Do MMMM YYYY"); %>'+
+                '<% start = moment(chapter.beginDate).format("D MMMM YYYY"); %>'+
+                '<% end = moment(chapter.endDate).format("D MMMM YYYY"); %>'+
                 '<% if (chapter.beginDate === chapter.endDate) end = ""; %>'+
               '<div class="index">' +
                 '<div class="inner"><%= index %></div>' +
