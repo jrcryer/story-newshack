@@ -78,7 +78,7 @@ define([
 
     if (page.quote) {
       this.setQuote(page.quote, page.showIntro);
-    } else {
+    } else if (this.quote) {
       this.quote.remove();
       this.quote = undefined;
     }

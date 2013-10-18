@@ -9,12 +9,9 @@ var mongoose = require('mongoose'),
 var storyId = 'arab_spring';
 
 exports.render = function(req, res) {
-    if (undefined !== req.params.storyId) {
-        storyId = req.params.storyId;
-    }
     res.render('index', {
         title: 'Storyline',
-        storyId: storyId,
+        storyId: req.params.storyId || 'arab_spring',
         user: req.user ? JSON.stringify(req.user) : "null"
     });
 };
