@@ -28,13 +28,7 @@
             "map": {
               "center": [10.18, 31.8],
               "zoom": 6,
-              "label": "Tunisia",
-              "features": [
-                {
-                  "label": "Hello world",
-                  "position": [10.18, 33.8]
-                }
-              ]
+              "label": "Tunisia"
             },
             "quote": {
               "quote": "We had a clean revolution. The former president turned out to be a coward. He just ran away. Not like the others - like the poor Libyans, or in Syria - but it lit the fuse to all the other revolutions",
@@ -52,7 +46,24 @@
             "title": "Suicide protestor dies",
             "summary": "<p>Mohammed Bouazizi, a Tunisian graduate whose attempted suicide set off violent protests over unemployment across the North Africa nation has died.</p>",
             "beginDate": "2010-12-17",
-            "endDate": "2010-12-17"
+            "endDate": "2010-12-17",
+            "map": {
+              "center": [10.3333, 36.7472],
+              "zoom": 10,
+              "label": "Ben Arous"
+            },
+            "person": {
+              "name": "Mohammed Bouazizi",
+              "summary": "Mohamed Bouazizi has become a hero in Tunisia ever since he doused himself in petrol and set himself alight in December, triggering protests which ultimately led to the downfall of President Zine al-Abidine Ben Ali.",
+              "born": "1984-03-29",
+              "died": "2011-01-04",
+              "age": 72,
+              "image": {
+                "url": "http://news.bbcimg.co.uk/media/images/50600000/jpg/_50600918_010913837-1.jpg",
+                "width": 304,
+                "height": 171
+              }
+            }
           },
           {
             "title": "Ousting of president",
@@ -166,6 +177,23 @@
               "center": [10, 10],
               "zoom": 10,
               "label": "Benghazi"
+            }
+          },
+          {
+            "title": "Gaddafi killed",
+            "summary": "Libya's ex-leader Col Muammar Gaddafi has been killed after an assault on his birthplace of Sirte, officials say. Acting Prime Minister Mahmoud Jibril announced the death, and later said the colonel had been killed in a crossfire between Gaddafi loyalists and fighters from the transitional authorities.",
+            "beginDate": "2011-10-20",
+            "endDate": "2011-10-20",
+            "map": {
+              "center": [10, 10],
+              "zoom": 10,
+              "label": "Sirte",
+              "features": [
+                {
+                  "label": "Gaddafi killed in Sirte",
+                  "position": [16.58866,31.20892 ]                
+                }
+              ]
             }
           },
           {
