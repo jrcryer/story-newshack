@@ -3,6 +3,8 @@
     "title": "Edward Snowden",
     "summary": "Edward Snowden went on the run earlier this year, taking with him vast amounts of secret information belonging to the US government's security services.",
     "showIntro": true,
+    "beginDate": "2013-06-06",
+    "endDate": "2013-06-06",
     "map": {
       "center": [80, 40],
       "zoom": 2
@@ -13,7 +15,7 @@
         "beginDate": "2013-06-06",
         "endDate": "2013-06-06",
         "map": {
-          "kml": "/data/kml/tunisia.kml"
+          "kml": "/data/kml/london.kml"
         },
         "pages": [
           {
@@ -25,7 +27,13 @@
             "map": {
               "center": [-0.12, 51.5],
               "zoom": 9,
-              "label": "London"
+              "label": "London",
+              "features": [
+                {
+                  "label": "Guardian offices",
+                  "position": [-0.13081,51.54299 ]
+                }
+              ]
             }
           }
         ]
@@ -35,7 +43,7 @@
         "beginDate": "2013-06-09",
         "endDate": "2011-06-09",
         "map": {
-          "kml": "/data/kml/egypt.kml"
+          "kml": "/data/kml/hongkong.kml"
         },
         "pages": [
           {
@@ -46,8 +54,14 @@
             "endDate": "2013-06-09",
             "map": {
               "center": [114.15769,22.28552],
-              "zoom": 6,
-              "label": "Hong Kong"
+              "zoom": 10,
+              "label": "Hong Kong",
+              "features": [
+              {
+                  "label": "The Mira Hotel",
+                  "position": [114.17021,22.30033]
+              }
+              ]
             }
           },
           {
@@ -56,6 +70,28 @@
             "showIntro": false,
             "beginDate": "2013-06-11",
             "endDate": "2013-06-11"
+          }
+        ]
+      },
+      {
+        "title": "Moscow",
+        "beginDate": "2013-06-20",
+        "endDate": "2011-08-20",
+        "map": {
+          "kml": "/data/kml/egypt.kml"
+        },
+        "pages": [
+          {
+            "title": "Moscow",
+            "summary": "US whistleblower Edward Snowden 'in transit area' at Moscow airport",
+            "showIntro": true,
+            "beginDate": "2013-06-20",
+            "endDate": "2013-06-20",
+            "map": {
+              "center": [37.61556, 55.75222],
+              "zoom": 9,
+              "label": "Moscow"
+            }
           }
         ]
       }
