@@ -50,7 +50,7 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
             }
             else if (remainder < 0.7 && page === 0 && this.currentPage > 0) {
                 this.currentPage = 0;
-                Backbone.trigger('story:page-change', this.chapter, this.chapter.pages[this.currentPage]);
+                Backbone.trigger('story:page-change', this.chapter, this.chapter.pages[this.currentPage], this.currentPage);
             }
         },
 
