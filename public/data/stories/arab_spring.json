@@ -3,6 +3,8 @@
     "title": "Arab Spring",
     "summary": "In December 2010, a young Tunisian set himself on fire after police confiscated his unlicensed cart and wares. This desperate act of rebellion sparked a wave of unrest across the Arab world.",
     "showIntro": true,
+    "beginDate": "2010-12-01",
+    "endDate": "2010-12-01",
     "map": {
       "center": [44, 33.8],
       "zoom": 4,
@@ -43,7 +45,8 @@
             "title": "Demonstrations",
             "summary": "A series of increasingly violent street demonstrations through December.",
             "beginDate": "2010-12-01",
-            "endDate": "2010-12-31"
+            "endDate": "2010-12-31",
+            "image": "/images/cfe7cb97a76b8b07e90e6a706700d21a_0.jpg"
           },
           {
             "title": "Suicide protestor dies",

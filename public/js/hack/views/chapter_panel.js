@@ -19,6 +19,7 @@ define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
                 '<% index = (index + 1) > 9 ? index + 1 : "0" + (index + 1); %>'+
                 '<% start = moment(chapter.beginDate).format("Do MMMM YYYY"); %>'+
                 '<% end = moment(chapter.endDate).format("Do MMMM YYYY"); %>'+
+                '<% if (chapter.beginDate === chapter.endDate) end = ""; %>'+
               '<div class="index">' +
                 '<div class="inner"><%= index %></div>' +
               '</div>' +
