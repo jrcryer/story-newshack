@@ -53,6 +53,7 @@
             }
 
 
+            /* WARNING!! These styles are duplicated in hovered-title */
             .title {
                 position: absolute;
                 left: 62px;
@@ -99,4 +100,35 @@
 }
 #chapter-panel li:hover .index {
     background: #86A5AD;
+}
+
+
+#hovered-title {
+    position: absolute;
+    width: 360px;
+    height: 80px;
+    color: #fff;
+    background: #86A5AD !important;
+    z-index: 20000; 
+
+    background: #7991A5;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    .inner {
+        display: block;
+        padding: 8px;
+    }
+
+    .chapter-title {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+
+    .start-date,
+    .end-date {
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
 }
