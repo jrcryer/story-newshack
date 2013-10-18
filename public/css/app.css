@@ -461,6 +461,7 @@ div.image-bg {
 }
 #chapter-panel ol li .title .start-date,
 #chapter-panel ol li .title .end-date {
+  color: #cbd8db;
   font-size: 14px;
   margin-bottom: 2px;
 }
@@ -470,6 +471,10 @@ div.image-bg {
 }
 #chapter-panel li:hover .title {
   background: #86A5AD;
+}
+#chapter-panel li:hover .title .start-date,
+#chapter-panel li:hover .title .end-date {
+  color: #c7d8dd;
 }
 #chapter-panel li:hover .index {
   background: #86A5AD;
@@ -496,6 +501,7 @@ div.image-bg {
 }
 #hovered-title .start-date,
 #hovered-title .end-date {
+  color: #cbd8db;
   font-size: 14px;
   margin-bottom: 2px;
 }
