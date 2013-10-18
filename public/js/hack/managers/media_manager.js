@@ -34,6 +34,12 @@ define([
     this.chapter = chapter;
     this.page = page;
 
+    if (this.page.image) {
+      this.displayImage();
+    } else if (this._imageLayer) {
+      this._imageLayer.remove();
+    }
+
     if (this.page.map) {
       if (this.page.showIntro) {
         this.page.map.offsetForIntro = true;
@@ -71,6 +77,35 @@ define([
     }
   };
 
+  /**
+   * Display image background in place of a map
+   */
+  MediaManager.prototype.displayImage = function() {
+
+    var html;
+
+    this.removeImage(); // remove any other images
+
+    html = '<div class="image-bg"></div>';
+    this._imageLayer = $(html);
+    this._imageLayer.css({
+      'background-image': 'url(' + this.page.image + ')'
+    });
+    this._imageLayer.hide();
+    $('#map').before(this._imageLayer);
+    this._imageLayer.fadeIn(400);
+  };
+
+  /**
+   * Remove the image background
+   */
+  MediaManager.prototype.removeImage = function() {
+    if (this._imageLayer) {
+      this._imageLayer.fadeOut(400, function(){
+        $(this).remove();
+      });
+    }
+  };
 
   MediaManager.prototype.setMap = function(options) {
     if (!this.map) {
