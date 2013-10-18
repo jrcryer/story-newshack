@@ -100,11 +100,26 @@ define(['jquery'], function($) {
   };
 
   Map.prototype.modifyPositionForIntro = function(position, zoom) {
-    return [position[0], position[1] + 4];
+    var offset = 0;
+    if (zoom > 8) {
+      offset = 0.1;
+    } else if (zoom > 6) {
+      offset = 0.5;
+    } else {
+      offset = 2;
+    }
+    return [position[0], position[1] + offset];
   };
 
   Map.prototype.modifyPositionForPanels = function(position, zoom) {
-    var offset = 1 * (12 - zoom);
+    var offset = 0;
+    if (zoom > 8) {
+      offset = 0.6;
+    } else if (zoom > 6) {
+      offset = 3;
+    } else {
+      offset = 4;
+    }
     return [position[0] + offset, position[1]];
   };
 
