@@ -131,7 +131,11 @@
             "summary": "Protests in Egypt began on 25 January 2011 and ran for 18 days. Beginning around midnight on 28 January, the Egyptian government attempted, somewhat successfully, to eliminate the nation's Internet access, in order to inhibit the protesters' ability use media activism to organize through social media.[192] Later that day, as tens of thousands protested on the streets of Egypt's major cities, President Hosni Mubarak dismissed his government, later appointing a new cabinet. Mubarak also appointed the first Vice President in almost 30 years.",
             "beginDate": "2011-01-25",
             "endDate": "2011-02-12",
-            "image": "/images/s_e09_0RTXX7PO.jpg"
+            "image": "/images/s_e09_0RTXX7PO.jpg",
+            "quote": {
+              "quote": "Political diversity necessitates on all parties to abide by the democratic process",
+              "attribution": "Ihab Fahmi "
+            }
           },
           {
             "title": "Square seized",
@@ -142,6 +146,10 @@
               "center": [31.23539, 30.04533],
               "zoom": 17,
               "label": "Tahrir Square"
+            },
+            "quote": {
+              "quote": "It is a critical time for the country and urged Egyptians to stand together, be optimistic about the future",
+              "attribution": "Prime Minister Hazem Beblawi "
             }
           }
         ]
