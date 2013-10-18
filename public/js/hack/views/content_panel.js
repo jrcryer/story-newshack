@@ -41,6 +41,7 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
             var remainder  = scrollPage % 1;
 
             if (remainder > 0.7) {
+                console.log(nextPage);
                 var nextPage = ++page;
                 console.log(this.currentPage);
 
