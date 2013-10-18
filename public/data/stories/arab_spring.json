@@ -105,7 +105,7 @@
               "zoom": 5,
               "label": "Egypt"
             },
-            "quotes": {
+            "quote": {
                 "quote": "Our country's condition was getting worse and worse. There was corruption, torture, injustice, inequality and no freedom. Someone had to stand up and say 'enough is enough'",
                 "attribution": "Ahmed Raafat Amin, protester"
             }
@@ -154,13 +154,8 @@
               "zoom": 5,
               "label": "Libya"
             },
-<<<<<<< HEAD
-            "quotes": {
-=======
             "image": "/images/lots-of-people.jpg",
-            "quotes": [
-              {
->>>>>>> 5c7532c33e9a20328d712d1a2814b50c950d86d3
+            "quote": {
                 "quote": "It's freedom. There's no Gaddafi, unbelievable. I feel the freedom. I smell the freedom.",
                 "attribution": "Lamin el-Bijou, Banghazi resident"
             }
