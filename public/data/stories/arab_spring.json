@@ -173,8 +173,10 @@
             "endDate": "2011-02-12",
             "map": {
               "center": [10, 10],
+              "zoom": 10,
               "label": "Benghazi"
-            }
+            },
+            "image": "/images/riot-van.jpg"
           }
         ]
       }
