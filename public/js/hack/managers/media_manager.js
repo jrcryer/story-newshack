@@ -4,8 +4,9 @@ define([
   'hack/views/map',
   'hack/views/intro',
   'hack/views/timeline',
-  'hack/views/profile'
-], function(Backbone, Map, Intro, Timeline, Profile) {
+  'hack/views/profile',
+  'hack/views/quote'
+], function(Backbone, Map, Intro, Timeline, Profile, Quote) {
 
   var MediaManager = function(config) {
     this.config = config;

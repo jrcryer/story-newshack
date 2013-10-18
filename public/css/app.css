@@ -336,6 +336,29 @@ table {
 .page-meta.visible {
   left: 20px;
 }
+div.quote {
+  width: 300px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+div.quote p.quote-marks {
+  font-weight: bold;
+  font-size: 100px;
+  margin: 0;
+  padding: 0;
+  line-height: 5px;
+}
+div.quote p.text {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 26px;
+}
+div.quote p.attribution {
+  font-size: 18px;
+}
 #chapter-panel {
   z-index: 5000;
   top: 0;
@@ -446,12 +469,14 @@ table {
 }
 #content-panel .pi {
   height: 100%;
+  padding: 20px 10px;
 }
 #content-panel ol {
   height: 100%;
   margin: 0;
   list-style: none;
   overflow: auto;
+  padding: 0 10px;
 }
 #content-panel ol h2 {
   margin: 0 0 12px;
@@ -502,6 +527,7 @@ section {
 /* Let's get this party started */
 ::-webkit-scrollbar {
   width: 6px;
+  padding: 20px;
 }
 /* Track */
 ::-webkit-scrollbar-track {

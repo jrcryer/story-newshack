@@ -6,3 +6,4 @@ public/lib
 .idea
 *.swp
 node_modules/*
+app.css
