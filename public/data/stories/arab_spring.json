@@ -180,6 +180,23 @@
             }
           },
           {
+            "title": "Gaddafi killed",
+            "summary": "Libya's ex-leader Col Muammar Gaddafi has been killed after an assault on his birthplace of Sirte, officials say. Acting Prime Minister Mahmoud Jibril announced the death, and later said the colonel had been killed in a crossfire between Gaddafi loyalists and fighters from the transitional authorities.",
+            "beginDate": "2011-10-20",
+            "endDate": "2011-10-20",
+            "map": {
+              "center": [10, 10],
+              "zoom": 10,
+              "label": "Sirte",
+              "features": [
+                {
+                  "label": "Gaddafi killed in Sirte",
+                  "position": [31.20892, 16.58866 ]                
+                }
+              ]
+            }
+          },
+          {
             "title": "Needs title",
             "summary": "TBC.",
             "beginDate": "2011-01-25",
