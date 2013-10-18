@@ -34,12 +34,10 @@
                 }
               ]
             },
-            "quotes": [
-              {
-                "quote": "We had a clean revolution. The former president turned out to be a coward. He just ran away. Not like the others - like the poor Libyans, or in Syria - but it lit the fuse to all the other revolutions",
-                "attribution": "Wassim Herissi, radio DJ"
-              }
-            ]
+            "quote": {
+              "quote": "We had a clean revolution. The former president turned out to be a coward. He just ran away. Not like the others - like the poor Libyans, or in Syria - but it lit the fuse to all the other revolutions",
+              "attribution": "Wassim Herissi, radio DJ"
+            }
           },
           {
             "title": "Demonstrations",
@@ -107,12 +105,10 @@
               "zoom": 5,
               "label": "Egypt"
             },
-            "quotes": [
-              {
+            "quote": {
                 "quote": "Our country's condition was getting worse and worse. There was corruption, torture, injustice, inequality and no freedom. Someone had to stand up and say 'enough is enough'",
                 "attribution": "Ahmed Raafat Amin, protester"
-              }
-            ]
+            }
           },
           {
             "title": "Protests",
@@ -159,12 +155,10 @@
               "label": "Libya"
             },
             "image": "/images/lots-of-people.jpg",
-            "quotes": [
-              {
+            "quote": {
                 "quote": "It's freedom. There's no Gaddafi, unbelievable. I feel the freedom. I smell the freedom.",
                 "attribution": "Lamin el-Bijou, Banghazi resident"
-              }
-            ]
+            }
           },
           {
             "title": "Protests",

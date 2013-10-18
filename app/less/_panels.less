@@ -49,12 +49,21 @@
     left: 20px;
 }
 
+
+
 div.quote {
   width: 300px;
   position: fixed;
   bottom: 20px;
   left: 20px;
   color: white;
+  background: #000;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+    transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
 
   p.quote-marks {
     font-weight: bold;
@@ -62,6 +71,10 @@ div.quote {
     margin: 0;
     padding: 0;
     line-height: 5px;
+    height: 30px;
+    display: block;
+    padding-top: 35px;
+    margin-bottom: -15px;
   }
   p.text {
     font-family: Georgia, Times, 'Times New Roman', serif;
@@ -72,6 +85,11 @@ div.quote {
   p.attribution {
     font-size: 18px;
   }
+}
+
+
+div.quote-with-timeline {
+  bottom: 70px;
 }
 
 div.image-bg {
