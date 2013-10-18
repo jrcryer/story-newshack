@@ -67,7 +67,7 @@
           },
           {
             "title": "Ousting of president",
-            "summary": "Ben Ali fled into exile in Saudi Arabia, ending his 23 years in power. A state of emergency was declared and a caretaker coalition government was created.",
+            "summary": "<p>Ben Ali fled into exile in Saudi Arabia, ending his 23 years in power. A state of emergency was declared and a caretaker coalition government was created.</p><p><img src='/images/people-celebrate-small.jpg' /></p>",
             "beginDate": "2011-01-14",
             "endDate": "2011-01-14",
             "person": {
@@ -83,7 +83,7 @@
           },
           {
             "title": "Government resuffle",
-            "summary": "As a result of continued daily protests, Prime Minister Mohamed Ghannouchi reshuffled the government, removing all former RCD members other than himself.",
+            "summary": "<p>As a result of continued daily protests, Prime Minister Mohamed Ghannouchi reshuffled the government, removing all former RCD members other than himself.</p>",
             "beginDate": "2011-01-27",
             "endDate": "2011-01-27",
             "person": {
@@ -192,7 +192,7 @@
               "features": [
                 {
                   "label": "Gaddafi killed in Sirte",
-                  "position": [16.58866,31.20892 ]                
+                  "position": [16.58866,31.20892 ]
                 }
               ]
             }
