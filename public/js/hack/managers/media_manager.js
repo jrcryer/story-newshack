@@ -65,7 +65,7 @@ define([
       this.setTimeline(page);
     } else if (this.intro) {
       this.intro.$el.find('#intro').fadeOut();
-      this.timeline.$el.find('#timeline').fadeOut();
+      $('#timeline-container').fadeOut();
       this.intro = undefined;
       this.timeline = undefined;
     }
@@ -89,6 +89,7 @@ define([
   };
 
   MediaManager.prototype.setTimeline = function(page) {
+    $('#timeline-container').show();
     this.timeline = new Timeline({
       el: '#timeline-container',
       page: page
