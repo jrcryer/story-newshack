@@ -174,7 +174,7 @@
             "beginDate": "2011-01-25",
             "endDate": "2011-02-12",
             "map": {
-              "center": [10, 10],
+              "center": [20.0667, 32.1167],
               "zoom": 10,
               "label": "Benghazi"
             }
