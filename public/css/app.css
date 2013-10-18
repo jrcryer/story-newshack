@@ -431,20 +431,20 @@ div.quote p.attribution {
   height: 100%;
   padding: 20px 10px;
 }
-#content-panel ol {
+#content-panel #pages {
   height: 100%;
   margin: 0;
   list-style: none;
   overflow: auto;
+  position: relative;
   padding: 0 10px;
 }
-#content-panel ol h2 {
+#content-panel #pages h2 {
   margin: 0 0 12px;
 }
 #content-panel .page {
   display: block;
   height: 100%;
-  background: url(/images/chevron.png) 50% 90% no-repeat;
 }
 #content-panel .page:last-child {
   background: none;

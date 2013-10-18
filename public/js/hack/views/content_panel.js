@@ -7,32 +7,36 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
 
         currentPage: 0,
 
+        events: {
+            'click .jump a': 'onIndexClicked'
+        },
+
         /**
          * @var string
          */
         template: _.template(
           '<div class="pi">' +
-          '<ol id="pages">' +
+          '<div id="pages">' +
           '<% _.each(pages, function(page, index) { %>' +
             '<% if (page.showIntro) { %>' +
-                '<li class="page">' +
+                '<div class="page">' +
                     '<h2><%= chapter.title %></h2>' +
                     '<% _.each(pages, function(page, index) { %>' +
                         '<% if (index > 0) { %>' +
-                            '<div>' +
+                            '<div class="jump">' +
                                 '<a href="#i-<%= index %>"><%= page.title %></a>' +
                             '</div>' +
                         '<% } %>' +
                     '<% }); %>' +
-                '</li>'+
+                '</div>'+
             '<% } else { %>' +
-                '<li class="page" id="i-<%= index %>">' +
+                '<div class="page" id="i-<%= index %>">' +
                     '<h2><%= page.title %></h2>' +
                     '<div><%= page.summary %></div>' +
-                '</li>' +
+                '</div>' +
             '<% } %>'+
           '<% }); %>' +
-          '</ol></div>'
+          '</div></div>'
         ),
 
         /**
@@ -42,6 +46,7 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
 
         initialize: function() {
             _.bindAll(this, 'onScroll');
+            _.bindAll(this, 'onAnimationComplete');
             $(window).on("mousewheel", this.$el, this.onScroll);
         },
 
@@ -85,7 +90,24 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
             this.noOfPages = this.chapter.pages.length;
             this.pageHeight = window.innerHeight;
             this.currentPage = 0;
+        },
+
+        onIndexClicked: function(e) {
+            var list  = this.$el.find('#pages');
+            var el    = this.$el.find(e.currentTarget);
+            var dest  = $(el.attr('href'));
+            this.currentPage = _.last(el.attr('href').split('-'));
+
+            list.animate({
+                scrollTop: list.scrollTop() + dest.position().top
+            }, (this.noOfPages * 300), this.onAnimationComplete);
+            e.preventDefault();
+        },
+
+        onAnimationComplete: function() {
+            Backbone.trigger('story:page-change', this.chapter, this.chapter.pages[this.currentPage], this.currentPage);
         }
+
     });
     return ContentPanel;
 });
