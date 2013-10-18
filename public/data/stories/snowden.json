@@ -1,0 +1,58 @@
+{
+  "storyline": {
+    "title": "Edward Snowden",
+    "chapters": [
+      {
+        "title": "London",
+        "beginDate": "2013-06-06",
+        "endDate": "2013-06-06",
+        "map": {
+          "kml": "/data/kml/tunisia.kml"
+        },
+        "pages": [
+          {
+            "title": "London",
+            "summary": "Guardian journalist Glenn Greenwald reports the US National Security Agency (NSA) is collecting the telephone records of millions of Verizon customers under a top secret court order granting the government unlimited authority to obtain communications data for a three-month period.", 
+            "showIntro": true,
+            "beginDate": "2013-06-06",
+            "endDate": "2013-06-06",
+            "map": {
+              "center": [-0.12574,51.50853],
+              "zoom": 5,
+              "label": "London"
+            }
+          }
+        ]
+      },
+      {
+        "title": "Hong Kong",
+        "beginDate": "2013-06-09",
+        "endDate": "2011-06-09",
+        "map": {
+          "kml": "/data/kml/egypt.kml"
+        },
+        "pages": [
+          {
+            "title": "Hong Kong",
+            "summary": "9 June: Edward Snowden, 29, is named as the source of the intelligence leaks. Speaking from Hong Kong, he explains why he went public.",
+            "showIntro": true,
+            "beginDate": "2013-06-09",
+            "endDate": "2013-06-09",
+            "map": {
+              "center": [114.15769,22.28552],
+              "zoom": 6,
+              "label": "Hong Kong"
+            }
+          },
+          {
+            "title": "US spy leaker Edward Snowden leaves Hong Kong hotel",
+            "summary": "An ex-CIA employee who leaked details of US top-secret phone and internet surveillance has disappeared from his hotel in Hong Kong.",
+            "showIntro": false,
+            "beginDate": "2013-06-11",
+            "endDate": "2013-06-11"
+          }
+        ]
+      }
+    ]
+  }
+}

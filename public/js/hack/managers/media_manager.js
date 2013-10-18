@@ -27,7 +27,7 @@ define([
 
 
   MediaManager.prototype.setPage = function(chapter, page) {
-console.log('setPage');
+    var that = this;
     this.chapter = chapter;
     this.page = page;
 
@@ -60,7 +60,7 @@ console.log('setPage');
     if (true === page.showIntro) {
       this.setIntro(page);
     } else if (this.intro) {
-      this.intro.$el.html('');
+      this.intro.$el.find('#intro').fadeOut();
       this.intro = undefined;
     }
   };
