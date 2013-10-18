@@ -7,7 +7,21 @@
     "endDate": "2013-06-06",
     "map": {
       "center": [80, 40],
-      "zoom": 2
+      "zoom": 2,
+      "features": [
+        {
+          "label": "London",
+          "position": [-0.1275, 51.5072]
+        },
+        {
+          "label": "Hong Kong",
+          "position": [114.1589, 22.2783]
+        },
+        {
+          "label": "Moscow",
+          "position": [37.6167, 55.7500]
+        }
+      ]
     },
     "chapters": [
       {
@@ -20,13 +34,24 @@
         "pages": [
           {
             "title": "London",
-            "summary": "Guardian journalist Glenn Greenwald reports the US National Security Agency (NSA) is collecting the telephone records of millions of Verizon customers under a top secret court order granting the government unlimited authority to obtain communications data for a three-month period.", 
+            "summary": "A former CIA technical worker has been identified by the UK's Guardian newspaper as the source of leaks about US surveillance programmes.", 
             "showIntro": true,
             "beginDate": "2013-06-06",
             "endDate": "2013-06-06",
             "map": {
               "center": [-0.12, 51.5],
               "zoom": 9,
+              "label": "London"
+            }
+          },
+          {
+            "title": "Glenn Greenwald",
+            "summary": "Guardian journalist Glenn Greenwald reports the US National Security Agency (NSA) is collecting the telephone records of millions of Verizon customers under a top secret court order granting the government unlimited authority to obtain communications data for a three-month period.", 
+            "beginDate": "2013-06-06",
+            "endDate": "2013-06-06",
+            "map": {
+              "center": [-0.065, 51.535],
+              "zoom": 12,
               "label": "London",
               "features": [
                 {
@@ -41,7 +66,7 @@
       {
         "title": "Hong Kong",
         "beginDate": "2013-06-09",
-        "endDate": "2011-06-09",
+        "endDate": "2013-06-09",
         "map": {
           "kml": "/data/kml/hongkong.kml"
         },
@@ -53,8 +78,8 @@
             "beginDate": "2013-06-09",
             "endDate": "2013-06-09",
             "map": {
-              "center": [114.15769,22.28552],
-              "zoom": 8,
+              "center": [113.95769,22.28552],
+              "zoom": 9,
               "label": "Hong Kong",
               "features": [
               {
@@ -65,14 +90,14 @@
             }
           },
           {
-            "title": "Hong Kong",
+            "title": "Hong Kong - Mira Hotel",
             "summary": "9 June: Edward Snowden, 29, is named as the source of the intelligence leaks. Speaking from Hong Kong, he explains why he went public.",
             "showIntro": false,
             "beginDate": "2013-06-09",
             "endDate": "2013-06-09",
             "map": {
-              "center": [114.17021,22.30033],
-              "zoom": 10,
+              "center": [114.18221,22.30033],
+              "zoom": 14,
               "label": "Hong Kong",
               "features": [
               {
@@ -88,10 +113,10 @@
             "showIntro": false,
             "beginDate": "2013-06-10",
             "endDate": "2013-06-10",
-            "map": {
-              "center": [114.15769,22.28552],
-              "zoom": 8,
-              "label": "Hong Kong"
+            "image": "/images/edward_snowden.jpg",
+            "quote": {
+              "quote": "I have some information in the intelligence community, and it won't be a waste of your time.",
+              "attribution": "Edward Snowden"
             }
           },
           {
@@ -101,8 +126,8 @@
             "beginDate": "2013-06-23",
             "endDate": "2013-06-23",
             "map": {
-              "center": [114.15769,22.28552],
-              "zoom": 8,
+              "center": [113.95769,22.28552],
+              "zoom": 9,
               "label": "Hong Kong"
             }
           }
@@ -111,10 +136,7 @@
       {
         "title": "Moscow",
         "beginDate": "2013-06-20",
-        "endDate": "2011-08-20",
-        "map": {
-          "kml": "/data/kml/egypt.kml"
-        },
+        "endDate": "2013-08-20",
         "pages": [
           {
             "title": "Moscow",
@@ -126,6 +148,27 @@
               "center": [37.61556, 55.75222],
               "zoom": 9,
               "label": "Moscow"
+            }
+          },
+          {
+            "title": "Snowden leaves airport",
+            "summary": "US intelligence leaker Edward Snowden has left the Moscow airport where he had been staying since June after being granted temporary asylum. Mr Snowden's lawyer said he had left after receiving the papers he needed to enter Russian territory from Sheremetyevo Airport's transit zone.",
+            "beginDate": "2013-08-01",
+            "endDate": "2013-08-01",
+            "map": {
+              "center": [37.9561, 55.4086],
+              "zoom": 12,
+              "label": "Moscow Airport",
+              "features": [
+                {
+                    "label": "Moscow Airport",
+                    "position": [37.9061, 55.4086]
+                }
+              ]
+            },
+            "quote": {
+              "quote": "It is a slap in the face of all Americans. Now is the time to fundamentally rethink our relationship with [President] Putin's Russia. We need to deal with the Russia that is, not the Russia we might wish for,",
+              "attribution": "Republican Senator John McCain"
             }
           }
         ]

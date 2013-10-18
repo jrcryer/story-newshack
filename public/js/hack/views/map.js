@@ -67,6 +67,18 @@ define(['jquery', 'backbone'], function($, Backbone) {
    *
    * @param {Array} features
    */
+  Map.prototype.clearFeatures = function() {
+    if (undefined !== this._featureLayer) {
+        this._olMap.removeLayer(this._featureLayer);
+        this._featureLayer = undefined;
+    }
+  };
+
+  /**
+   * Add a new feature to the map.
+   *
+   * @param {Array} features
+   */
   Map.prototype.addFeatures = function(features) {
 
     var style, data;

@@ -23,6 +23,9 @@ define([
     if (this.config.storyline.map && this.config.storyline.map.kml) {
       this.map.setKmlUrl(this.config.storyline.map.kml);
     }
+    if (this.config.storyline.map && this.config.storyline.map.features) {
+      this.map.addFeatures(this.config.storyline.map.features);
+    }
     if (this.config.storyline.showIntro) {
         this.setIntro(this.config.storyline);
         this.setTimeline(this.config.storyline);
@@ -55,6 +58,8 @@ define([
 
     if (this.map && this.page.map && this.page.map.features) {
       this.map.addFeatures(this.page.map.features);
+    } else {
+      this.map.clearFeatures();
     }
 
     if (page.person) {
