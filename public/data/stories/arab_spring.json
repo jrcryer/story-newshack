@@ -28,13 +28,7 @@
             "map": {
               "center": [10.18, 31.8],
               "zoom": 6,
-              "label": "Tunisia",
-              "features": [
-                {
-                  "label": "Hello world",
-                  "position": [10.18, 33.8]
-                }
-              ]
+              "label": "Tunisia"
             },
             "quote": {
               "quote": "We had a clean revolution. The former president turned out to be a coward. He just ran away. Not like the others - like the poor Libyans, or in Syria - but it lit the fuse to all the other revolutions",
@@ -52,7 +46,24 @@
             "title": "Suicide protestor dies",
             "summary": "Mohammed Bouazizi, a Tunisian graduate whose attempted suicide set off violent protests over unemployment across the North Africa nation has died.",
             "beginDate": "2010-12-17",
-            "endDate": "2010-12-17"
+            "endDate": "2010-12-17",
+            "map": {
+              "center": [10.3333, 36.7472],
+              "zoom": 10,
+              "label": "Ben Arous"
+            },
+            "person": {
+              "name": "Mohammed Bouazizi",
+              "summary": "Mohamed Bouazizi has become a hero in Tunisia ever since he doused himself in petrol and set himself alight in December, triggering protests which ultimately led to the downfall of President Zine al-Abidine Ben Ali.",
+              "born": "1984-03-29",
+              "died": "2011-01-04",
+              "age": 72,
+              "image": {
+                "url": "http://news.bbcimg.co.uk/media/images/50600000/jpg/_50600918_010913837-1.jpg",
+                "width": 304,
+                "height": 171
+              }
+            }
           },
           {
             "title": "Ousting of president",
