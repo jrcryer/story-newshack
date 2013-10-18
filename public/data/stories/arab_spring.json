@@ -70,9 +70,11 @@
             "summary": "Ben Ali fled into exile in Saudi Arabia, ending his 23 years in power. A state of emergency was declared and a caretaker coalition government was created.",
             "beginDate": "2011-01-14",
             "endDate": "2011-01-14",
+            "image": "/images/tunisian_gov_ousted.jpg",
             "person": {
               "name": "Zine El Abidine Ben Ali",
               "summary": "Led Tunisia for 23 years before stepping down in January 2011 amid an unprecedented wave of street protests.",
+              "born": "1963-09-03",
               "image": {
                 "url": "http://news.bbcimg.co.uk/media/images/50809000/jpg/_50809733_50808975.jpg",
                 "width": 224,
