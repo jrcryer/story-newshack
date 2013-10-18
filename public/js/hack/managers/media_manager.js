@@ -4,8 +4,9 @@ define([
   'hack/views/map',
   'hack/views/intro',
   'hack/views/timeline',
-  'hack/views/profile'
-], function(Backbone, Map, Intro, Timeline, Profile) {
+  'hack/views/profile',
+  'hack/views/quote'
+], function(Backbone, Map, Intro, Timeline, Profile, Quote) {
 
   var MediaManager = function(config) {
     this.config = config;
@@ -57,6 +58,15 @@ define([
       this._profilePanel = new Profile(page.person);
     } else if (this.hasOwnProperty('_profilePanel')) {
       this._profilePanel.remove();
+    }
+
+    if (page.quotes && page.quotes.length > 0) {
+      if (this._quotePanel) {
+        this._quotePanel.remove();
+      }
+      this._quotePanel = new Quote(page.quotes[0]);
+    } else if(this._quotePanel) {
+      this._quotePanel.remove();
     }
 
     if (true === page.showIntro) {
