@@ -42,12 +42,15 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
 
             if (remainder > 0.7) {
                 var nextPage = ++page;
-                console.log(this.currentPage);
 
                 if (this.currentPage !== nextPage) {
                     this.currentPage = nextPage;
-                    Backbone.trigger('story:page-change', this.chapter, this.chapter.pages[this.currentPage]);
+                    Backbone.trigger('story:page-change', this.chapter, this.chapter.pages[this.currentPage], this.currentPage);
                 }
+            }
+            else if (remainder < 0.7 && page === 0 && this.currentPage > 0) {
+                this.currentPage = 0;
+                Backbone.trigger('story:page-change', this.chapter, this.chapter.pages[this.currentPage], this.currentPage);
             }
         },
 

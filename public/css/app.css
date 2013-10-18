@@ -267,7 +267,7 @@ table {
   position: absolute;
   z-index: 1000;
   top: 20px;
-  left: -300px;
+  left: -320px;
   background: black;
   padding: 2px;
   color: white;
@@ -415,9 +415,13 @@ table {
 #content-panel ol h2 {
   margin: 0 0 12px;
 }
-#content-panel ol .page {
+#content-panel .page {
   display: block;
   height: 100%;
+  background: url(/images/chevron.png) 50% 90% no-repeat;
+}
+#content-panel .page:last-child {
+  background: none;
 }
 #content-panel.active {
   margin-right: 384px;
