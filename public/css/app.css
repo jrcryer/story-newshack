@@ -359,6 +359,19 @@ div.quote p.text {
 div.quote p.attribution {
   font-size: 18px;
 }
+div.image-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 #chapter-panel {
   z-index: 5000;
   top: 0;

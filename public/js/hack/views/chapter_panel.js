@@ -1,5 +1,5 @@
 /*global define */
-define(['backbone', 'underscore'], function (Backbone, _) {
+define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
 
     var ChapterPanel = Backbone.View.extend({
 
@@ -18,16 +18,16 @@ define(['backbone', 'underscore'], function (Backbone, _) {
           '<% _.each(chapters, function(chapter, index) { %>' +
             '<li data-index="<%= index %>">' +
                 '<% index = (index + 1) > 9 ? index + 1 : "0" + (index + 1); %>'+
-                '<% start = new Date(chapter.beginDate); %>'+
-                '<% end = new Date(chapter.endDate); %>'+
+                '<% start = moment(chapter.beginDate).format("Do MMMM YYYY"); %>'+
+                '<% end = moment(chapter.endDate).format("Do MMMM YYYY"); %>'+
               '<div class="index">' +
                 '<div class="inner"><%= index %></div>' +
               '</div>' +
               '<div class="title">' +
                 '<div class="inner">' +
                   '<div class="chapter-title"><%= chapter.title %></div>' +
-                  '<div class="start-date"><%= start.getDay() + " " + months[start.getMonth()] + " " + start.getFullYear() %></div>' +
-                  '<div class="end-date"><%= end.getDay() + " " + months[end.getMonth()] + " " + end.getFullYear() %></div>' +
+                  '<div class="start-date"><%= start %></div>' +
+                  '<div class="end-date"><%= end %></div>' +
                 '</div>' +
               '</div>' +
             '</li>' +
@@ -39,7 +39,9 @@ define(['backbone', 'underscore'], function (Backbone, _) {
          * Event handlers
          */
         events: {
-          'click li': 'onChapterClick'
+          'click li': 'onChapterClick',
+          'mouseover li': 'onChapterHoverOver',
+          'mouseout li': 'onChapterHoverOut'
         },
 
         /**
@@ -51,6 +53,8 @@ define(['backbone', 'underscore'], function (Backbone, _) {
          * Bar Height
          */
         barHeight: 20,
+
+        isContentOpen: false,
 
         /**
          * Initialize and setup event listening
@@ -89,9 +93,40 @@ define(['backbone', 'underscore'], function (Backbone, _) {
             this.$el.find('h1').addClass('defocus');
 
             this.renderProgressBar(chapter);
-
+            
+            this.isContentOpen = true;
+            
+            // Remove the hovered chapter thing
+            this.onChapterHoverOut();
+            
             Backbone.trigger('story:chapter-change', chapter);
             e.preventDefault();
+        },
+
+        /**
+         * Handles a hover over a chapter item
+         */
+        onChapterHoverOver: function(e) {
+            if (this.isContentOpen && !$(e.currentTarget).hasClass('current')) {
+                var title,
+                    titleClone,
+                    hoveredTitle;
+                
+                title = $(e.currentTarget).find('.title');
+                
+                titleClone = title.clone();
+                titleClone.attr('id','hovered-title');
+                titleClone.css(title.offset());
+                
+                this.$el.parent().append(titleClone);
+            }
+        },
+
+        /**
+         * Handles a hover out
+         */
+        onChapterHoverOut: function(e) {
+            this.$el.parent().find('#hovered-title').remove();
         },
 
 
