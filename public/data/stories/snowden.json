@@ -3,6 +3,8 @@
     "title": "Edward Snowden",
     "summary": "Edward Snowden went on the run earlier this year, taking with him vast amounts of secret information belonging to the US government's security services.",
     "showIntro": true,
+    "beginDate": "2013-06-06",
+    "endDate": "2013-06-06",
     "map": {
       "center": [80, 40],
       "zoom": 2
