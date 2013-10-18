@@ -44,22 +44,34 @@
     .jump {
         a {
             display: block;
-            padding: 8px;
             color: #FFF;
-            border-bottom: 1px solid #606060;
             text-decoration: none;
+        }
+        a:hover {
+            background: #29ABE2;
+
+            .times {
+                color: #FFF;
+            }
         }
         span {
             display: block;
         }
         .event {
+            padding: 8px 8px 0;
             font-size: 18px;
             margin-bottom: 4px;
         }
         .times {
+            padding: 0 8px;
             color: #cbd8db;
             font-size: 14px;
             margin-bottom: 2px;
+        }
+        .times:last-child {
+            padding: 0 8px 8px;
+            margin: 0;
+            border-bottom: 1px solid #606060;
         }
     }
     .jump:last-child {
