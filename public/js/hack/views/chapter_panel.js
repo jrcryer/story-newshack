@@ -12,7 +12,6 @@ define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
          * @var string
          */
         template: _.template(
-          '<% months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; %>' +
           '<div class="pi"><h1><%= title %></h1>' +
           '<ol id="chapters">' +
           '<% _.each(chapters, function(chapter, index) { %>' +
@@ -64,7 +63,7 @@ define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
         initialize: function(options) {
             this.title = 'Key Events';
             this.chapters = options.storyline.chapters;
-        
+
             Backbone.on('story:page-change', this.updateProgressBar, this);
         },
 
@@ -94,12 +93,12 @@ define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
             this.$el.find('h1').addClass('defocus');
 
             this.renderProgressBar(chapter);
-            
+
             this.isContentOpen = true;
-            
+
             // Remove the hovered chapter thing
             this.onChapterHoverOut();
-            
+
             Backbone.trigger('story:chapter-change', chapter);
             e.preventDefault();
         },
@@ -112,13 +111,13 @@ define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
                 var title,
                     titleClone,
                     hoveredTitle;
-                
+
                 title = $(e.currentTarget).find('.title');
-                
+
                 titleClone = title.clone();
                 titleClone.attr('id','hovered-title');
                 titleClone.css(title.offset());
-                
+
                 this.$el.parent().append(titleClone);
             }
         },
@@ -135,13 +134,13 @@ define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
             var progressBar,
                 index,
                 bar;
-           
+
             this.$el.find('.progress-bar').remove();
 
-            progressBar = $('<div class="progress-bar"><div class="bar"></div></div>'); 
+            progressBar = $('<div class="progress-bar"><div class="bar"></div></div>');
             bar = progressBar.find('.bar');
             index = this.$el.find('.current .index');
-        
+
             this.barHeight = index.height() / chapter.pages.length;
             bar.css({height: this.barHeight});
 
@@ -156,7 +155,7 @@ define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
             topPos = this.barHeight * index;
 
             this.$el.find('.bar').css({
-                top: topPos 
+                top: topPos
             });
         }
     });

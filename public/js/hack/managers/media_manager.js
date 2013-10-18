@@ -37,8 +37,8 @@ define([
 
     if (this.page.image) {
       this.displayImage();
-    } else if (this._imageLayer) {
-      this._imageLayer.remove();
+    } else {
+      this.removeImage();
     }
 
     if (this.page.map) {
@@ -90,28 +90,37 @@ define([
    */
   MediaManager.prototype.displayImage = function() {
 
-    var html;
+    var html, this_;
 
-    this.removeImage(); // remove any other images
+    this_ = this;
+    this.removeImage(function(){
+      html = '<div class="image-bg"></div>';
+      this_._imageLayer = $(html);
+      this_._imageLayer.css({
+        'background-image': 'url(' + this_.page.image + ')',
+        'display': 'none'
+      });
+      $('#map').before(this_._imageLayer);
+      this_._imageLayer.fadeIn(1000);
+    }); // remove any other images
 
-    html = '<div class="image-bg"></div>';
-    this._imageLayer = $(html);
-    this._imageLayer.css({
-      'background-image': 'url(' + this.page.image + ')'
-    });
-    this._imageLayer.hide();
-    $('#map').before(this._imageLayer);
-    this._imageLayer.fadeIn(400);
   };
 
   /**
    * Remove the image background
    */
-  MediaManager.prototype.removeImage = function() {
+  MediaManager.prototype.removeImage = function(fn) {
+    var this_ = this;
     if (this._imageLayer) {
       this._imageLayer.fadeOut(400, function(){
         $(this).remove();
+        this_._imageLayer = undefined;
+        if (typeof fn === 'function') {
+          fn();
+        }
       });
+    } else if (typeof fn === 'function') {
+      fn();
     }
   };
 

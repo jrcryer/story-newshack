@@ -23,8 +23,14 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
                     '<h2><%= chapter.title %></h2>' +
                     '<% _.each(pages, function(page, index) { %>' +
                         '<% if (index > 0) { %>' +
+                            '<% start = moment(page.beginDate).format("Do MMMM YYYY"); %>'+
+                            '<% end = moment(page.endDate).format("Do MMMM YYYY"); %>'+
                             '<div class="jump">' +
-                                '<a href="#i-<%= index %>"><%= page.title %></a>' +
+                                '<a href="#i-<%= index %>">' +
+                                    '<span class="event"><%= page.title %></span>' +
+                                    '<span class="times"><%= start %></span>' +
+                                    '<span class="times"><%= end %></span>' +
+                                '</a>' +
                             '</div>' +
                         '<% } %>' +
                     '<% }); %>' +
