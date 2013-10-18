@@ -405,6 +405,7 @@ div.image-bg {
   padding: 20px;
 }
 #chapter-panel h1 {
+  font-weight: 300;
   margin: 0 0 12px;
   transition: 0.8s all ease-in;
 }
@@ -541,6 +542,7 @@ div.image-bg {
   padding: 0 10px;
 }
 #content-panel #pages h2 {
+  font-weight: 300;
   margin: 0 0 12px;
 }
 #content-panel .page {
@@ -549,6 +551,29 @@ div.image-bg {
 }
 #content-panel .page:last-child {
   background: none;
+}
+#content-panel .jump a {
+  display: block;
+  padding: 8px;
+  color: #FFF;
+  border-bottom: 1px solid #606060;
+  text-decoration: none;
+}
+#content-panel .jump span {
+  display: block;
+}
+#content-panel .jump .event {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+#content-panel .jump .times {
+  color: #cbd8db;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+#content-panel .jump:last-child a {
+  border-bottom: 0 none;
+  text-decoration: none;
 }
 #content-panel.active {
   margin-right: 380px;
