@@ -77,11 +77,15 @@ define([
       this.timeline = undefined;
     }
 
-    if (page.quote) {
-      this.setQuote(page.quote, page.showIntro);
-    } else if (this.quote) {
-      this.quote.remove();
-      this.quote = undefined;
+    if (this.quote) {
+        this.quote.remove();
+        this.quote = undefined;
+    }
+
+    if (undefined !== this.page.quote) {
+      setTimeout(function(){
+        that.setQuote(that.page.quote, that.page.showIntro);
+      }, 2000);
     }
   };
 
