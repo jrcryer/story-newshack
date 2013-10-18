@@ -13,7 +13,7 @@ define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
          */
         template: _.template(
           '<div id="timeline-wrapper">' +
-          '<div id="timeline">' +
+          '<div id="timeline" class="<%= timelineClass %>">' +
           '<p class="begin"><span><%= beginDay %></span> <%= begin %></p>' +
           '<p class="end"><span><%= endDay %></span> <%= end %></p>' +
           '</div>' +
@@ -41,7 +41,8 @@ define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
                 begin: begin.format("MMMM YYYY"),
                 beginDay: begin.format("Do"),
                 end: end.format('MMMM YYYY'),
-                endDay: end.format('Do')
+                endDay: end.format('Do'),
+                timelineClass: this.page.beginDate === this.page.endDate ? 'no-date' : ''
             }));
 
             var availableWidth = window.innerWidth - 500;
