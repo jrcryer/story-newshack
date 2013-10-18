@@ -39,7 +39,9 @@ define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
          * Event handlers
          */
         events: {
-          'click li': 'onChapterClick'
+          'click li': 'onChapterClick',
+          'mouseover li': 'onChapterHoverOver',
+          'mouseout li': 'onChapterHoverOut'
         },
 
         /**
@@ -51,6 +53,8 @@ define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
          * Bar Height
          */
         barHeight: 20,
+
+        isContentOpen: false,
 
         /**
          * Initialize and setup event listening
@@ -89,9 +93,40 @@ define(['backbone', 'underscore', 'moment'], function (Backbone, _, moment) {
             this.$el.find('h1').addClass('defocus');
 
             this.renderProgressBar(chapter);
-
+            
+            this.isContentOpen = true;
+            
+            // Remove the hovered chapter thing
+            this.onChapterHoverOut();
+            
             Backbone.trigger('story:chapter-change', chapter);
             e.preventDefault();
+        },
+
+        /**
+         * Handles a hover over a chapter item
+         */
+        onChapterHoverOver: function(e) {
+            if (this.isContentOpen && !$(e.currentTarget).hasClass('current')) {
+                var title,
+                    titleClone,
+                    hoveredTitle;
+                
+                title = $(e.currentTarget).find('.title');
+                
+                titleClone = title.clone();
+                titleClone.attr('id','hovered-title');
+                titleClone.css(title.offset());
+                
+                this.$el.parent().append(titleClone);
+            }
+        },
+
+        /**
+         * Handles a hover out
+         */
+        onChapterHoverOut: function(e) {
+            this.$el.parent().find('#hovered-title').remove();
         },
 
 
