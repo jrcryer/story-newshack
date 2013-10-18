@@ -39,13 +39,12 @@ define([
       this.displayImage();
     } else {
       this.removeImage();
-    }
-
-    if (this.page.map) {
-      if (this.page.showIntro) {
-        this.page.map.offsetForIntro = true;
+      if (this.page.map) {
+        if (this.page.showIntro) {
+          this.page.map.offsetForIntro = true;
+        }
+        this.setMap(this.page.map);
       }
-      this.setMap(this.page.map);
     }
 
     if (this.chapter.map && this.chapter.map.kml) {

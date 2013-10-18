@@ -53,7 +53,8 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
         initialize: function() {
             _.bindAll(this, 'onScroll');
             _.bindAll(this, 'onAnimationComplete');
-            this.$el.on("mousewheel, DOMMouseScroll", '#pages', this.onScroll);
+            $(window).on("mousewheel", this.$el, this.onScroll);
+            $(window).on("mousewheel, DOMMouseScroll", this.$el, this.onScroll);
             this.$el.on("touchmove", '#pages', this.onScroll);
         },
 
