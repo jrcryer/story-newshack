@@ -1,5 +1,5 @@
 /*global define, ol */
-define(['jquery'], function($) {
+define(['jquery', 'backbone'], function($, Backbone) {
 
   /**
    * Create a mew instance of a map
@@ -9,6 +9,8 @@ define(['jquery'], function($) {
    * @constructor
    */
   function Map(elementId, options) {
+
+    var that = this;
 
     // the map options
     this._options = $.extend(true, {
@@ -42,6 +44,13 @@ define(['jquery'], function($) {
       controls: []
     });
 
+    this.isWaitingForMoveEnd = true;
+    this._olMap.on('moveend', function() {
+      if (that.isWaitingForMoveEnd) {
+        that.isWaitingForMoveEnd = false;
+        Backbone.trigger('map:ready');
+      }
+    });
   }
 
   /**
@@ -101,7 +110,9 @@ define(['jquery'], function($) {
 
   Map.prototype.modifyPositionForIntro = function(position, zoom) {
     var offset = 0;
-    if (zoom > 8) {
+    if (zoom > 10) {
+      offset = 0;
+    } else if (zoom > 8) {
       offset = 0.1;
     } else if (zoom > 6) {
       offset = 0.5;
@@ -113,7 +124,9 @@ define(['jquery'], function($) {
 
   Map.prototype.modifyPositionForPanels = function(position, zoom) {
     var offset = 0;
-    if (zoom > 8) {
+    if (zoom > 10) {
+      offset = 0.00085;
+    } else if (zoom > 8) {
       offset = 0.6;
     } else if (zoom > 6) {
       offset = 3;
@@ -187,6 +200,8 @@ define(['jquery'], function($) {
   Map.prototype.moveTo = function(position, zoom, offsetForIntro) {
 
     var duration, start, viewZoom, panAnimation, zoomAnimation, bounceMultiplier;
+
+    this.isWaitingForMoveEnd = true;
 
     position = this.modifyPositionForPanels(position, zoom);
     if (offsetForIntro) {

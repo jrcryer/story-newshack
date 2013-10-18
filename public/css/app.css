@@ -532,6 +532,10 @@ div.image-bg {
   overflow: auto;
   padding: 0 10px;
 }
+#content-panel ol li.page a {
+  font-size: 1.4em;
+  line-height: 1.6;
+}
 #content-panel ol h2 {
   margin: 0 0 12px;
 }

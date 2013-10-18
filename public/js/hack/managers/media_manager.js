@@ -13,6 +13,7 @@ define([
     this.view = null;
 
     Backbone.on('story:page-change', $.proxy(this.setPage, this));
+    //Backbone.on('map:ready', $.proxy(this.mapReady, this));
 
     if (this.config.storyline.map) {
       this.config.storyline.map.offsetForIntro = true;
