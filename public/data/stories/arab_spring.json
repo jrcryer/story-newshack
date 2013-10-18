@@ -185,6 +185,10 @@
             "beginDate": "2011-10-20",
             "endDate": "2011-10-20",
             "image": "/images/colonel-gaddafi.jpg",
+            "quote": {
+                "quote": "My master is here ... Muammar Gaddafi is here and he is wounded",
+                "attribution": "Unnamed Gaddafi bodyguard"
+            },
             "map": {
               "center": [10, 10],
               "zoom": 10,
