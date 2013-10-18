@@ -14,10 +14,23 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
           '<div class="pi">' +
           '<ol id="pages">' +
           '<% _.each(pages, function(page, index) { %>' +
-            '<li class="page" id="i-<%= index %>">' +
-              '<h2><%= page.title %></h2>' +
-              '<div><%= page.summary %></div>' +
-            '</li>' +
+            '<% if (page.showIntro) { %>' +
+                '<li class="page">' +
+                    '<h2><%= chapter.title %></h2>' +
+                    '<% _.each(pages, function(page, index) { %>' +
+                        '<% if (index > 0) { %>' +
+                            '<div>' +
+                                '<a href="#i-<%= index %>"><%= page.title %></a>' +
+                            '</div>' +
+                        '<% } %>' +
+                    '<% }); %>' +
+                '</li>'+
+            '<% } else { %>' +
+                '<li class="page" id="i-<%= index %>">' +
+                    '<h2><%= page.title %></h2>' +
+                    '<div><%= page.summary %></div>' +
+                '</li>' +
+            '<% } %>'+
           '<% }); %>' +
           '</ol></div>'
         ),
@@ -61,6 +74,7 @@ define(['backbone', 'underscore', 'jquery'], function (Backbone, _, $) {
                 return;
             }
             this.$el.html(this.template({
+                chapter: this.chapter,
                 pages: this.chapter.pages
             }));
             this.$el.addClass('active');
