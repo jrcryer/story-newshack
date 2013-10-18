@@ -69,6 +69,13 @@ define([
       this.intro = undefined;
       this.timeline = undefined;
     }
+
+    if (page.quote) {
+      this.setQuote(page.quote, page.showIntro);
+    } else {
+      this.quote.remove();
+      this.quote = undefined;
+    }
   };
 
 
@@ -86,6 +93,10 @@ define([
       page: page
     });
     this.intro.render();
+  };
+
+  MediaManager.prototype.setQuote = function(quote, withTimeline) {
+    this.quote = new Quote(quote, withTimeline);
   };
 
   MediaManager.prototype.setTimeline = function(page) {
