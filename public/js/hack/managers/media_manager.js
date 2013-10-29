@@ -98,14 +98,24 @@ define([
    */
   MediaManager.prototype.displayImage = function() {
 
-    var html, this_;
+    var html, this_, image;
+
+    if ('string' === typeof this.page.image) {
+      image = {
+        url : this.page.image,
+        width: 4,
+        height: 3
+      };
+    } else {
+      image = this.page.image;
+    }
 
     this_ = this;
     this.removeImage(function(){
       html = '<div class="image-bg"></div>';
       this_._imageLayer = $(html);
       this_._imageLayer.css({
-        'background-image': 'url(' + this_.page.image + ')',
+        'background-image': 'url(' + image.url + ')',
         'display': 'none'
       });
       $('#map').before(this_._imageLayer);
