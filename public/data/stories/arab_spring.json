@@ -40,7 +40,11 @@
             "summary": "<p>A series of increasingly violent street demonstrations through December.</p><p style='margin-top: 24px;'><img src='/images/random-stats.png' /></p><p>Thousands of opposition supporters have marched in Tunisia's capital Tunis, demanding the immediate resignation of the Islamist-led government.</p><p>The protesters formed a 3km-long (two miles) human chain from the parliament building to the seat of the government.</p>",
             "beginDate": "2010-12-01",
             "endDate": "2010-12-31",
-            "image": "/images/cfe7cb97a76b8b07e90e6a706700d21a_0.jpg"
+            "image": {
+              "url": "/images/tunisia_demonstrations.jpg",
+              "width": 1920,
+              "height": 1206
+            }
           },
           {
             "title": "Suicide protestor dies",
@@ -59,7 +63,7 @@
               "died": "2011-01-04",
               "age": 72,
               "image": {
-                "url": "http://news.bbcimg.co.uk/media/images/50600000/jpg/_50600918_010913837-1.jpg",
+                "url": "/images/mohammed_bouazizi.jpg",
                 "width": 304,
                 "height": 171
               }
@@ -70,13 +74,17 @@
             "summary": "<p>Ben Ali fled into exile in Saudi Arabia, ending his 23 years in power. A state of emergency was declared and a caretaker coalition government was created.</p><p><img src='/images/people-celebrate-small.jpg' /></p>",
             "beginDate": "2011-01-14",
             "endDate": "2011-01-14",
-            "image": "/images/tunisian_gov_ousted.jpg",
+            "image": {
+              "url": "/images/tunisian_gov_ousted.jpg",
+              "width": 1920,
+              "height": 1310
+            },
             "person": {
               "name": "Zine El Abidine Ben Ali",
               "summary": "Led Tunisia for 23 years before stepping down in January 2011 amid an unprecedented wave of street protests.",
               "born": "1963-09-03",
               "image": {
-                "url": "http://news.bbcimg.co.uk/media/images/50809000/jpg/_50809733_50808975.jpg",
+                "url": "/images/zine_el_abidine_ben_ali.jpg",
                 "width": 224,
                 "height": 299
               },
